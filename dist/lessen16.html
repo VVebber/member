@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+          <!--les3 sticky-element2-->
+        </div>
+
+        <div class="lessen block">
+          <h1>Исключения и обработка ошибок</h1>
+          <h2>Создание и использование исключений.</h2>
+          <p class="textIndent">
+            Исключения (Exceptions) - это механизм обработки ошибок в языке
+            программирования C#. Они представляют собой специальные объекты,
+            которые возникают в результате ошибок во время выполнения программы,
+            таких как деление на ноль, попытка чтения несуществующего файла,
+            невозможность соединения с базой данных и т.д.
+          </p>
+          <p class="textIndent">
+            Исключения позволяют обработать ошибку, не завершая выполнение
+            программы или метода, и вернуть управление обратно к коду, который
+            может обработать и исправить ошибку. При возникновении исключения в
+            C# создается объект исключения, который может быть перехвачен и
+            обработан в программе.
+          </p>
+          <p class="textIndent">
+            Создание исключений в C# осуществляется с помощью ключевого слова
+            `throw`. Когда возникает ошибка, вы можете создать объект исключения
+            и выбросить его с помощью оператора throw. Например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >if (x == 0) { throw new DivideByZeroException(); }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Этот код проверяет значение переменной `x` и, если оно равно нулю,
+            выбрасывает исключение типа `DivideByZeroException`.
+          </p>
+          <p class="textIndent">
+            Чтобы обработать исключение, вы можете использовать блок
+            `try-catch`. Блок `try` содержит код, который может вызвать
+            исключение, а блок `catch` содержит код, который обрабатывает
+            исключение. Например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer8">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { // выполнение кода, который может вызвать исключение }
+                  catch (DivideByZeroException e) { // обработка исключения
+                  }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере блок `try` содержит код, который может вызвать
+            исключение типа `DivideByZeroException`, а блок `catch` обрабатывает
+            это исключение, если оно возникнет. Параметр `e` содержит информацию
+            об исключении.
+          </p>
+          <p class="textIndent">
+            Вы также можете использовать блок `finally`, чтобы определить код,
+            который будет выполнен независимо от того, возникало исключение или
+            нет. Например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { // выполнение кода, который может вызвать исключение }
+                  catch (DivideByZeroException e) { // обработка исключения }
+                  finally { // выполнение кода, который будет выполнен
+                  независимо от того, возникало исключение или нет }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере блок `finally` содержит код, который будет выполнен
+            независимо от того, возникало исключение или нет.
+          </p>
+          <p class="textIndent">
+            В C# также есть возможность создавать свои собственные исключения,
+            наследуясь от класса `Exception`. Это позволяет создавать более
+            информативные исключения, которые содержат дополнительные сведения о
+            причине ошибки.
+          </p>
+          <p>Например:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >public class CustomException : Exception { public
+                  CustomException(string message) : base(message) { } public
+                  CustomException(string message, Exception innerException) :
+                  base(message, innerException) { } public int ErrorCode { get;
+                  set; } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы создали класс `CustomException`, который
+            наследуется от класса `Exception`. Он содержит свойство `ErrorCode`,
+            которое можно использовать для передачи дополнительной информации об
+            ошибке. Конструкторы `CustomException` принимают сообщение об ошибке
+            и, если нужно, вложенное исключение, которое может содержать
+            дополнительную информацию о причине ошибки.
+          </p>
+          <p class="textIndent">
+            Чтобы выбросить собственное исключение, можно использовать оператор
+            `throw`, например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4_3">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >if (someCondition) { throw new CustomException("Error
+                  message") { ErrorCode = 42 }; }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы проверяем некоторое условие `someCondition`, и
+            если оно истинно, выбрасываем собственное исключение
+            `CustomException` с сообщением об ошибке и установленным значением
+            `ErrorCode`.
+          </p>
+          <h2>Обработка исключений.</h2>
+          <p class="textIndent">
+            Обработка исключений - это механизм, который позволяет программе
+            корректно обрабатывать ошибки и исключительные ситуации, которые
+            могут возникнуть во время ее выполнения.
+          </p>
+          <p class="textIndent">
+            В языке C# обработка исключений выполняется с помощью конструкции
+            try-catch-finally. Код, который может вызвать исключение, должен
+            быть помещен в блок try. Если исключение возникает в блоке try,
+            управление передается соответствующему блоку catch, где исключение
+            может быть обработано. Блок finally может использоваться для
+            выполнения кода, который должен быть выполнен независимо от того,
+            возникло исключение или нет.
+          </p>
+          <p>Вот пример использования try-catch-finally:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12_3">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { // код, который может вызвать исключение } catch
+                  (Exception ex) { // обработка исключения } finally { // код,
+                  который должен быть выполнен независимо от того, возникло
+                  исключение или нет }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В блоке catch можно указать тип исключения, которое нужно
+            обработать. Если исключение, которое возникло, не соответствует
+            указанному типу, оно будет передано дальше по стеку вызовов.
+          </p>
+          <p class="textIndent">
+            Также в C# есть возможность использовать несколько блоков catch для
+            обработки разных типов исключений:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer16">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { // код, который может вызвать исключение } catch
+                  (DivideByZeroException ex) { // обработка исключения
+                  DivideByZeroException } catch (Exception ex) { // обработка
+                  других типов исключений } finally { // код, который должен
+                  быть выполнен независимо от того, возникло исключение или нет
+                  }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Также в C# можно использовать блок throw для генерации собственных
+            исключений. Например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer11">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { if (someCondition) { throw new Exception("Some error
+                  message"); } } catch (Exception ex) { // обработка
+                  сгенерированного исключения }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Обработка исключений важна для того, чтобы обеспечить правильное
+            функционирование программы и сообщить пользователю о возможных
+            проблемах. При проектировании программы следует учитывать возможные
+            исключительные ситуации и предусмотреть соответствующую обработку
+            исключений.
+          </p>
+          <h2>Использование блока finally.</h2>
+          <p class="textIndent">
+            Блок finally - это блок кода, который всегда выполняется после
+            выполнения блока try или блока catch, независимо от того, было ли
+            возбуждено исключение или нет. Блок finally часто используется для
+            освобождения ресурсов, например, закрытия файла или соединения с
+            базой данных, которые были открыты в блоке try.
+          </p>
+          <p>
+            Синтаксис использования блока finally выглядит следующим образом:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12_4">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >try { // код, который может вызвать исключение }
+                  catch(Exception ex) { // обработка исключения } finally { //
+                  код, который всегда должен выполняться }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В приведенном выше примере блок try содержит код, который может
+            вызывать исключение. Если исключение происходит, программа переходит
+            к блоку catch, где исключение обрабатывается. Затем программа
+            выполняет блок finally, где выполняется код, который всегда должен
+            быть выполнен, например, закрытие файла или соединения с базой
+            данных.
+          </p>
+          <p class="textIndent">
+            Если исключение не возникает в блоке try, программа все равно
+            выполняет блок finally. Это позволяет гарантировать, что ресурсы
+            будут правильно освобождены, даже если происходят другие ошибки в
+            процессе выполнения программы.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./One.js"></script>
+    <script src="./console.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

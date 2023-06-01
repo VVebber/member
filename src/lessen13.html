@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+          <!--les3 sticky-element2-->
+        </div>
+
+        <div class="lessen block">
+          <h1>Наследование и полиморфизм</h1>
+          <h2>Создание классов-наследников.</h2>
+          <p class="textIndent">
+            Создание классов-наследников является одним из ключевых моментов
+            объектно-ориентированного программирования. Наследование позволяет
+            создавать новые классы на основе уже существующих, заимствуя их
+            свойства и методы и добавляя собственные.
+          </p>
+          <p class="textIndent">
+            Для создания класса-наследника в C# необходимо использовать ключевое
+            слово `class`, после которого указывается имя нового класса и имя
+            базового класса, от которого он будет наследоваться, разделенные
+            двоеточием.
+          </p>
+          <p>Пример:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer10">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Employee : Person { public string Position { get; set;
+                  } public int Salary { get; set; } public void Work() {
+                  Console.WriteLine("I'm working!"); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере класс `Employee` наследуется от класса `Person`. Он
+            добавляет свои собственные поля `Position` и `Salary`, а также метод
+            `Work`, который не определен в базовом классе `Person`.
+          </p>
+          <p class="textIndent">
+            При создании экземпляра класса-наследника будут доступны все
+            свойства и методы как базового класса, так и добавленные в
+            наследующем классе.
+          </p>
+          <p>Пример:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer10_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Employee : Person { public string Position { get; set;
+                  } public int Salary { get; set; } public void Work() {
+                  Console.WriteLine("I'm working!"); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Здесь объект `employee` является экземпляром класса `Employee`, но
+            он также наследует свойства и методы класса `Person`.
+          </p>
+          <p class="textIndent">
+            При создании классов-наследников, наследуемый класс (родительский)
+            должен быть определен до создания наследника. Для этого используется
+            ключевое слово `:`, за которым следует имя наследуемого класса.
+            Например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer15">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Animal { public void Eat() { Console.WriteLine("Animal
+                  is eating."); } } class Dog : Animal { public void Bark() {
+                  Console.WriteLine("Dog is barking."); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В примере выше класс `Dog` является наследником класса `Animal`. Это
+            означает, что класс `Dog` наследует все поля и методы класса
+            `Animal`, включая метод `Eat()`. Кроме того, класс `Dog` добавляет
+            свой собственный метод `Bark()`. Теперь объекты класса `Dog` могут
+            использовать как метод `Eat()`, так и метод `Bark()`.
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer3">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >Dog myDog = new Dog(); myDog.Eat(); // Output: Animal is
+                  eating. myDog.Bark(); // Output: Dog is barking.
+                </code>
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            При создании объекта класса-наследника, сначала вызывается
+            конструктор родительского класса, а затем конструктор
+            класса-наследника. Для этого в классе-наследнике можно использовать
+            ключевое слово `base` для обращения к конструктору родительского
+            класса.
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer15_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Animal { public Animal(string name) {
+                  Console.WriteLine("Animal constructor called."); } } class Dog
+                  : Animal { public Dog(string name) : base(name) {
+                  Console.WriteLine("Dog constructor called."); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В примере выше конструктор класса `Dog` вызывает конструктор класса
+            `Animal` с помощью ключевого слова `base`.
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer3_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >Dog myDog = new Dog("Fido"); // Output: Animal constructor
+                  called. // Dog constructor called.</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Кроме того, при наследовании классов можно использовать модификаторы
+            доступа `protected` и `internal`. Модификатор `protected` делает
+            поля и методы доступными только для класса и его наследников, а
+            модификатор internal делает поля и методы доступными только в
+            пределах текущей сборки.
+          </p>
+          <h3>
+            Полиморфизм: виртуальные методы, абстрактные классы и интерфейсы.
+          </h3>
+          <p class="textIndent">
+            Полиморфизм - это способность объектов одного класса использовать
+            методы другого класса, если они реализованы совместимым способом. В
+            языках программирования это достигается через виртуальные методы,
+            абстрактные классы и интерфейсы.
+          </p>
+          <p class="textIndent">
+            Виртуальные методы - это методы, которые могут быть переопределены в
+            классах-наследниках. Для создания виртуальных методов в C#
+            используется ключевое слово `virtual`. При вызове виртуального
+            метода у объекта класса выполняется код этого метода из
+            класса-наследника, если он был переопределен в нем. Если же метод не
+            был переопределен в классе-наследнике, то будет выполнен код метода
+            из базового класса.
+          </p>
+          <p>Например, рассмотрим следующий код:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer27">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Animal { public virtual void MakeSound() {
+                  Console.WriteLine("Animal makes a sound"); } } class Dog :
+                  Animal { public override void MakeSound() {
+                  Console.WriteLine("Dog barks"); } } class Program { static
+                  void Main(string[] args) { Animal animal = new Animal(); Dog
+                  dog = new Dog(); animal.MakeSound(); // Output: Animal makes a
+                  sound dog.MakeSound(); // Output: Dog barks } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы создали два класса - `Animal` и `Dog`. У класса
+            `Animal` есть виртуальный метод `MakeSound`, который выводит строку
+            "Animal makes a sound". У класса `Dog` этот метод был переопределен
+            с помощью ключевого слова `override`, и теперь он выводит строку
+            "Dog barks". В методе `Main` мы создали объекты классов `Animal` и
+            `Dog` и вызвали у них метод `MakeSound`. У объекта класса `Animal`
+            был выполнен метод `MakeSound` из базового класса `Animal`, а у
+            объекта класса `Dog` - метод `MakeSound` из класса `Dog`, потому что
+            этот метод был переопределен в нем.
+          </p>
+          <p class="textIndent">
+            Абстрактные классы - это классы, которые содержат один или несколько
+            абстрактных методов. Абстрактный метод - это метод без реализации,
+            который должен быть реализован в классе-наследнике. Для создания
+            абстрактных классов в C# используется ключевое слово `abstract`.
+            Класс, содержащий хотя бы один абстрактный метод, также должен быть
+            объявлен абстрактным.
+          </p>
+          <p>Например, рассмотрим следующий код:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer55">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >abstract class Shape { public abstract double GetArea(); }
+                  class Rectangle : Shape { private double length; private
+                  double width; public Rectangle(double l, double w) { length =
+                  l; width = w; } public override double GetArea() { return
+                  length * width; } } class Circle : Shape { private double
+                  radius; public Circle(double r) { radius = r; } public
+                  override double GetArea() { return Math.PI * Math.Pow(radius,
+                  2); } } class Program { static void Main(string[] args) {
+                  Shape[] shapes = new Shape[2]; shapes[0] = new Rectangle(5,
+                  10); shapes[1] = new Circle(7); foreach (Shape shape in
+                  shapes) { Console.WriteLine($"The area is {shape.GetArea()}");
+                  } } } // Output: // The area is 50 // The area is
+                  153.93804002589985</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы создали абстрактный класс Shape с единственным
+            абстрактным методом GetArea. Затем мы создали два класса-наследника
+            - Rectangle и Circle, которые реализовывают этот метод для
+            соответствующих геометрических фигур.
+          </p>
+          <p class="textIndent">
+            В методе Main мы создали массив объектов Shape, содержащий объекты
+            Rectangle и Circle, и затем прошли по нему в цикле, вызывая метод
+            GetArea для каждого объекта. Обратите внимание, что при вызове
+            метода GetArea мы не знаем, какой именно класс объекта на самом деле
+            является, мы просто знаем, что он является объектом класса Shape или
+            его производного класса. Это демонстрирует полиморфизм, который
+            позволяет использовать объекты производных классов так, как будто
+            это объекты базового класса.
+          </p>
+          <h2>Перегрузка методов.</h2>
+          <p class="textIndent">
+            Перегрузка методов - это возможность создания нескольких методов с
+            одним и тем же именем, но различными параметрами. Это позволяет
+            использовать одно и то же имя метода для различных операций, в
+            зависимости от типов данных, которые используются в качестве
+            аргументов.
+          </p>
+          <p>Пример использования перегрузки методов:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer17">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Calculator { public int Add(int a, int b) { return a +
+                  b; } public double Add(double a, double b) { return a + b; }
+                  public string Add(string a, string b) { return a + b; }
+                  }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере класс `Calculator` имеет три метода `Add`, но каждый
+            метод имеет различные типы данных параметров. Первый метод принимает
+            два целых числа и возвращает целое число, второй метод принимает два
+            числа с плавающей точкой и возвращает число с плавающей точкой, а
+            третий метод принимает две строки и возвращает строку, которая
+            является результатом конкатенации этих двух строк.
+          </p>
+          <p class="textIndent">
+            Когда мы вызываем метод `Add`, компилятор определяет, какой метод
+            следует вызывать, основываясь на типах аргументов, которые мы
+            передаем в метод. Например, если мы вызываем метод `Add` с двумя
+            целыми числами, то компилятор выберет первый метод для выполнения
+            операции сложения, а если мы вызываем метод `Add` с двумя строками,
+            то компилятор выберет третий метод.
+          </p>
+          <p class="textIndent">
+            Перегрузка методов упрощает кодирование и улучшает читаемость кода,
+            поскольку мы можем использовать одно и то же имя метода для
+            выполнения различных операций в зависимости от контекста.
+          </p>
+          <h2>Задание</h2>
+          <ol>
+            <li><h3>Наследование:</h3></li>
+            <ul>
+              <li>
+                Создай базовый класс "Фигура" с методом "ВычислитьПлощадь".
+              </li>
+              <li>
+                Создай производные классы "Круг" и "Прямоугольник" с
+                переопределением метода "ВычислитьПлощадь".
+              </li>
+              <li>
+                Создай объекты классов "Круг" и "Прямоугольник" и вызови их
+                методы.
+              </li>
+            </ul>
+            <button class="button" onclick="toggleText('hiddenText1')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText1">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer49">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >using System; // Базовый класс "Фигура" class Фигура {
+                      public virtual void ВычислитьПлощадь() {
+                      Console.WriteLine("Вычисление площади фигуры"); } } //
+                      Производный класс "Круг" class Круг : Фигура { public
+                      override void ВычислитьПлощадь() {
+                      Console.WriteLine("Вычисление площади круга"); // Здесь
+                      можно добавить код для вычисления площади круга } } //
+                      Производный класс "Прямоугольник" class Прямоугольник :
+                      Фигура { public override void ВычислитьПлощадь() {
+                      Console.WriteLine("Вычисление площади прямоугольника"); //
+                      Здесь можно добавить код для вычисления площади
+                      прямоугольника } } class Program { static void
+                      Main(string[] args) { // Создание объекта класса "Круг"
+                      Круг круг = new Круг(); // Вызов метода "ВычислитьПлощадь"
+                      для объекта класса "Круг" круг.ВычислитьПлощадь(); //
+                      Создание объекта класса "Прямоугольник" Прямоугольник
+                      прямоугольник = new Прямоугольник(); // Вызов метода
+                      "ВычислитьПлощадь" для объекта класса "Прямоугольник"
+                      прямоугольник.ВычислитьПлощадь(); // Ожидание нажатия
+                      клавиши, чтобы консольное окно не закрылось сразу после
+                      выполнения программы Console.ReadKey(); } }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li><h3>Полиморфизм:</h3></li>
+            <ul>
+              <li>
+                Создай абстрактный класс "Транспортное Средство" с абстрактным
+                методом "Передвигаться".
+              </li>
+              <li>
+                Создай производные классы "Автомобиль" и "Велосипед" с
+                реализацией метода "Передвигаться".
+              </li>
+              <li>
+                Создай массив объектов класса "Транспортное Средство" и вызови
+                их методы "Передвигаться" в цикле.
+              </li>
+            </ul>
+            <button class="button" onclick="toggleText('hiddenText2')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText2">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer45">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >using System; // Абстрактный класс "Транспортное
+                      Средство" abstract class ТранспортноеСредство { //
+                      Абстрактный метод "Передвигаться" public abstract void
+                      Передвигаться(); } // Производный класс "Автомобиль" class
+                      Автомобиль : ТранспортноеСредство { public override void
+                      Передвигаться() { Console.WriteLine("Автомобиль движется
+                      по дороге."); } } // Производный класс "Велосипед" class
+                      Велосипед : ТранспортноеСредство { public override void
+                      Передвигаться() { Console.WriteLine("Велосипед движется по
+                      велодорожке."); } } class Program { static void
+                      Main(string[] args) { // Создание массива объектов класса
+                      "Транспортное Средство" ТранспортноеСредство[] транспорт =
+                      new ТранспортноеСредство[2]; транспорт[0] = new
+                      Автомобиль(); транспорт[1] = new Велосипед(); // Вызов
+                      метода "Передвигаться" для каждого объекта в массиве
+                      foreach (ТранспортноеСредство тс in транспорт) {
+                      тс.Передвигаться(); } Console.ReadLine(); } }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleText(id) {
+        let text = document.getElementById(id);
+        if (text.classList.contains("active")) {
+          text.classList.remove("active");
+          setTimeout(() => {
+            text.style.display = "none";
+          }, 300);
+        } else {
+          text.style.display = "block";
+          setTimeout(() => {
+            text.classList.add("active");
+          }, 10);
+        }
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+          <!--les3 sticky-element2-->
+        </div>
+
+        <div class="lessen block"></div>
+      </div>
+    </div>
+    <script>
+      const questions = [
+        {
+          question: "Что такое С#?",
+          options: [
+            "Операционная система",
+            "Язык программирования",
+            "База данных",
+            "Браузер",
+          ],
+          answer: "Язык программирования",
+        },
+        {
+          question: 'Что означает ключевое слово "сalass" в C#?',
+          options: [
+            "Ключевое слово для определения пользовательского типа данных",
+            "Ключевое слово для выполнения циклических операций",
+            "Ключевое слово для работы с исключениями",
+            "Ключевое слово для определения функций    ",
+          ],
+          answer:
+            "Ключевое слово для определения пользовательского типа данных",
+        },
+        {
+          question: "Как объявить переменную в C#?",
+          options: [
+            "var variableName;",
+            "string variableName;",
+            "int variableName;",
+            " variableName = value;",
+          ],
+          answer: "int variableName;",
+        },
+        {
+          question: 'Что такое "массив" в C#?',
+          options: [
+            "Структура данных, которая хранит коллекцию элементов одного типа",
+            "Математическая операция",
+            "Функция для преобразования типов данных",
+            "Оператор для создания циклов",
+          ],
+          answer:
+            "Структура данных, которая хранит коллекцию элементов одного типа",
+        },
+        {
+          question:
+            "Структура данных, которая хранит коллекцию элементов одного типа",
+          options: [
+            "Место, где хранятся исходные коды программы",
+            "Коллекция классов и типов, объединенных в одну логическую группу",
+            "Оператор для выполнения условных операций",
+            "Функция для создания новых объектов",
+          ],
+          answer:
+            "Коллекция классов и типов, объединенных в одну логическую группу",
+        },
+        {
+          question:
+            "Какой модификатор доступа используется по умолчанию для членов класса в C#?",
+          options: ["public", "private", "protected", "internal"],
+          answer: "private",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+
+      const questionElement = document.getElementById("question");
+      const optionsElement = document.getElementById("options");
+      const submitBtn = document.getElementById("submitBtn");
+      const resultElement = document.getElementById("result");
+
+      function loadQuestion() {
+        const question = questions[currentQuestion];
+        questionElement.textContent = question.question;
+
+        optionsElement.innerHTML = "";
+        for (let option of question.options) {
+          const label = document.createElement("label");
+          const radioBtn = document.createElement("input");
+          radioBtn.type = "radio";
+          radioBtn.name = "option";
+          radioBtn.value = option;
+          label.appendChild(radioBtn);
+          label.appendChild(document.createTextNode(option));
+          optionsElement.appendChild(label);
+          optionsElement.appendChild(document.createElement("br"));
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

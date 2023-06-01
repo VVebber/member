@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+          <!--les3 sticky-element2-->
+        </div>
+
+        <div class="lessen block">
+          <h1>Пространства имен</h1>
+          <h2>Создание и использование пространств имен</h2>
+          <p class="textIndent">
+            Пространства имен (namespace) в C# позволяют организовывать код в
+            логически связанные группы и предотвращать конфликты имен.
+            Пространства имен могут содержать классы, интерфейсы, перечисления,
+            делегаты и другие элементы.
+          </p>
+          <p>
+            Для создания пространства имен используется ключевое слово
+            `namespace`:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >namespace MyNamespace { // Код }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p>
+            Пространство имен может включать в себя другие пространства имен:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer8">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >namespace MyNamespace { namespace SubNamespace { // Код }
+                  }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Для использования классов, интерфейсов и других элементов из
+            определенного пространства имен, необходимо указать имя пространства
+            имен перед именем элемента:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >using MyNamespace; // Создание объекта класса из пространства
+                  имен MyNamespace MyClass myObject = new MyClass();</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Если класс находится в другом пространстве имен, можно указать
+            полное имя класса:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >MyNamespace.MyClass myObject = new
+                  MyNamespace.MyClass();</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Можно также создать псевдоним для пространства имен, чтобы сократить
+            запись:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer3">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >using MN = MyNamespace; MN.MyClass myObject = new
+                  MN.MyClass();</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            При создании библиотеки классов рекомендуется использовать свои
+            пространства имен для избежания конфликтов имен с другими
+            библиотеками.
+          </p>
+          <p class="textIndent">
+            В C# пространства имен используются для группировки типов и других
+            конструкций в логически связанные блоки. Они помогают избежать
+            конфликтов имен, когда два или более класса имеют одно и то же имя.
+          </p>
+          <p class="textIndent">
+            Глобальные пространства имен являются корневыми пространствами имен
+            и содержат все другие пространства имен в проекте. Каждое глобальное
+            пространство имен имеет уникальное имя, например, System, System.IO,
+            System.Collections.Generic и т.д.
+          </p>
+          <p class="textIndent">
+            Локальные пространства имен, или вложенные пространства имен, могут
+            быть определены внутри других пространств имен. Они используются для
+            организации связанных типов в группы и обеспечивают локальную
+            область видимости для этих типов. Таким образом, локальные
+            пространства имен могут содержать типы с одинаковыми именами,
+            которые не конфликтуют с типами, определенными в других
+            пространствах имен.
+          </p>
+          <p class="textIndent">
+            В целом, глобальные и локальные пространства имен имеют одинаковое
+            назначение - организовать типы в логически связанные блоки и
+            предотвратить конфликты имен. Однако, глобальные пространства имен
+            используются для группировки типов, которые могут использоваться в
+            разных частях приложения, тогда как локальные пространства имен
+            используются для организации связанных типов в группы с общей
+            областью видимости.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./One.js"></script>
+    <script src="./console.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

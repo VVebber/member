@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+          <!--les3 sticky-element2-->
+        </div>
+
+        <div class="lessen block">
+          <h1>Интерфейсы</h1>
+          <h2>Создание и использование интерфейсов.</h2>
+          <p class="textIndent">
+            Интерфейс в объектно-ориентированном программировании является
+            контрактом, который определяет, какие методы и свойства должен
+            реализовать класс, который реализует этот интерфейс.
+          </p>
+          <p class="textIndent">
+            Для создания интерфейса в C# используется ключевое слово interface.
+            Давайте рассмотрим пример:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer5">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >interface IAnimal { void Eat(); void Sleep(); }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В данном примере мы создали интерфейс `IAnimal`, который определяет
+            два метода: `Eat` и `Sleep`. Классы, которые реализуют этот
+            интерфейс, должны реализовать оба этих метода.
+          </p>
+          <p class="textIndent">
+            Для того, чтобы класс мог реализовать интерфейс, он должен
+            использовать ключевое слово `implements`. Рассмотрим пример:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Dog : IAnimal { public void Eat() {
+                  Console.WriteLine("The dog is eating."); } public void Sleep()
+                  { Console.WriteLine("The dog is sleeping."); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В данном примере класс `Dog` реализует интерфейс `IAnimal`, поэтому
+            он должен реализовать методы `Eat` и `Sleep`. В этом случае, метод
+            `Eat` выводит сообщение о том, что собака ест, а метод `Sleep`
+            выводит сообщение о том, что собака спит.
+          </p>
+          <p class="textIndent">
+            Использование интерфейсов позволяет создавать код, который легко
+            поддерживать и расширять, поскольку он обеспечивает явную связь
+            между классами и методами. Кроме того, интерфейсы позволяют
+            создавать более гибкий и масштабируемый код.
+          </p>
+          <p>Пример использования интерфейсов в C#:</p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer9">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Program { static void Main(string[] args) { Dog myDog =
+                  new Dog(); myDog.Eat(); myDog.Sleep(); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В данном примере мы создали экземпляр класса `Dog`, который
+            реализует интерфейс `IAnimal`, и вызвали его методы `Eat` и `Sleep`.
+          </p>
+          <p class="textIndent">
+            Интерфейсы могут быть также использованы в качестве типов данных.
+            Рассмотрим пример:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer35">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >interface ICanMove { void Move(); } class Vehicle : ICanMove
+                  { public void Move() { Console.WriteLine("The vehicle is
+                  moving."); } } class Animal : ICanMove { public void Move() {
+                  Console.WriteLine("The animal is moving."); } } class Program
+                  { static void Main(string[] args) { List&lt;ICanMove&gt; list
+                  = new List&lt;ICanMove&gt;(); list.Add(new Vehicle());
+                  list.Add(new Animal()); foreach (ICanMove item in list) {
+                  item.Move(); } } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В данном примере мы создали интерфейс `ICanMove`, который определяет
+            метод `Move`. Классы `Vehicle` и `Animal` реализуют этот интерфейс,
+            что означает, что они оба должны реализовать метод Move.
+          </p>
+          <p class="textIndent">
+            Интерфейсы позволяют создавать общие функциональные возможности,
+            которые могут быть использованы в различных классах, даже если эти
+            классы не наследуют друг друга.
+          </p>
+          <p class="textIndent">
+            Например, мы можем создать интерфейс ICanFly и имплементировать его
+            в классах Airplane и Bird, чтобы оба класса могли использовать метод
+            Fly. Это позволяет нам создавать более гибкий и расширяемый код.
+          </p>
+          <p class="textIndent">
+            Создание интерфейса в C# осуществляется с помощью ключевого слова
+            interface. Ниже приведен пример создания интерфейса ICanFly:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >interface ICanFly { void Fly(); }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Как и в случае с абстрактными классами, интерфейсы могут содержать
+            как методы без реализации, так и свойства.
+          </p>
+          <p class="textIndent">
+            Для того чтобы класс реализовал интерфейс, он должен
+            имплементировать все методы, указанные в интерфейсе. Например, класс
+            Airplane, который имеет метод Fly, может реализовать интерфейс
+            ICanFly следующим образом:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer7">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Airplane : ICanFly { public void Fly() { // Код для
+                  полета самолета } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Аналогично, класс Bird, который имеет метод Fly, может реализовать
+            интерфейс ICanFly следующим образом:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer7_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Bird : ICanFly { public void Fly() { // Код для полета
+                  птицы } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Теперь, если мы создадим объекты классов Airplane и Bird, мы можем
+            вызвать метод Fly у каждого из них, используя интерфейс ICanFly:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer5_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >ICanFly airplane = new Airplane(); ICanFly bird = new Bird();
+                  airplane.Fly(); bird.Fly();</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Такой подход позволяет нам создавать более универсальный и
+            расширяемый код, так как мы можем использовать объекты разных
+            классов, которые реализуют один и тот же интерфейс.
+          </p>
+          <h2>Различие между абстрактными классами и интерфейсами.</h2>
+          <p>
+            Абстрактные классы и интерфейсы - это два разных подхода к
+            определению общих характеристик для группы классов. Вот некоторые из
+            основных различий между ними:
+          </p>
+          <ol>
+            <li class="textIndent">
+              Реализация методов: Абстрактный класс может содержать как
+              реализованные, так и нереализованные методы, в то время как
+              интерфейс содержит только сигнатуры методов, но не их реализацию.
+              В интерфейсе все методы должны быть реализованы в классе, который
+              реализует интерфейс.
+            </li>
+            <li class="textIndent">
+              Использование: Абстрактный класс может быть использован как
+              базовый класс для других классов, тогда как интерфейс может быть
+              реализован несколькими классами. Класс может наследовать только
+              один абстрактный класс, но может реализовывать множество
+              интерфейсов.
+            </li>
+            <li class="textIndent">
+              Наследование: Абстрактный класс может быть унаследован другим
+              классом, который может переопределить или расширить его
+              функциональность, а интерфейс может быть реализован классом,
+              который не связан иерархически с интерфейсом.
+            </li>
+            <li class="textIndent">
+              Множественное наследование: В C# класс может наследовать только
+              один класс, но может реализовывать несколько интерфейсов. В
+              языках, которые поддерживают множественное наследование классов,
+              абстрактный класс может наследовать несколько классов, в то время
+              как интерфейс может быть реализован множеством классов.
+            </li>
+            <li class="textIndent">
+              Различия в синтаксисе: Абстрактный класс определяется с
+              использованием ключевого слова "abstract", а интерфейс - с помощью
+              ключевого слова "interface".
+            </li>
+          </ol>
+          <p class="textIndent">
+            В целом, абстрактные классы используются тогда, когда нужно
+            определить базовый функционал для группы классов, которые находятся
+            в определенной иерархии наследования, в то время как интерфейсы
+            используются для определения поведения, которое должен реализовать
+            класс, независимо от его положения в иерархии наследования.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./One.js"></script>
+    <script src="./console.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data types and variables</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+        </div>
+
+        <div class="lessen block" `>
+          <h1>Конструкция switch-case</h1>
+          <p class="textIndent">
+            Конструкция switch-case является одним из способов управления
+            выполнением программы в языке C#. Эта конструкция позволяет выбирать
+            действия в зависимости от значения переменной или выражения. В
+            данной лекции мы рассмотрим, как использовать конструкцию
+            switch-case в C# и как она может быть полезна в разработке программ.
+          </p>
+          <p class="textIndent">
+            Синтаксис конструкции switch-case в C# выглядит следующим образом:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer12">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >switch (expression) { case value1: // действия, которые нужно
+                  выполнить, если expression равно value1 break; case value2: //
+                  действия, которые нужно выполнить, если expression равно
+                  value2 break; ... default: // действия, которые нужно
+                  выполнить, если expression не равно ни одному из значений case
+                  break; }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Здесь expression - это выражение, для которого мы хотим выполнить
+            проверку, `value1`, `value2`, ... - это значения, с которыми мы
+            хотим сравнить `expression`, и `default` - это ветка, которая будет
+            выполнена, если expression не равно ни одному из значений case.
+          </p>
+          <p class="textIndent">
+            Давайте рассмотрим пример использования конструкции switch-case:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer31">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >int dayOfWeek = 3; string dayName; switch (dayOfWeek) { case
+                  1: dayName = "Понедельник"; break; case 2: dayName =
+                  "Вторник"; break; case 3: dayName = "Среда"; break; case 4:
+                  dayName = "Четверг"; break; case 5: dayName = "Пятница";
+                  break; case 6: dayName = "Суббота"; break; case 7: dayName =
+                  "Воскресенье"; break; default: dayName = "Неизвестный день
+                  недели"; break; } Console.WriteLine("День недели: " +
+                  dayName);</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы определяем значение `dayOfWeek` равным 3, затем
+            используем конструкцию switch-case, чтобы определить, какой день
+            недели соответствует этому значению. В данном случае мы получим на
+            выходе строку "Среда".
+          </p>
+          <p class="textIndent">
+            Конструкция switch-case также может быть использована с другими
+            типами данных, например, с символьными строками. Например:
+          </p>
+
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer19">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >string color = "красный"; string message; switch (color) {
+                  case "красный": message = "Сигнал светофора - стой!"; break;
+                  case "желтый": message = "Сигнал светофора - жди!"; break;
+                  case "зеленый": message = "Сигнал светофора - проезд
+                  разрешен!"; break; default: message = "Неизвестный ц вет
+                  светофора"; break; } Console.WriteLine(message);</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            В этом примере мы определяем значение `color` равным "красный",
+            затем используем конструкцию switch-case, чтобы определить, какое
+            сообщение должно быть выведено на экран в зависимости от цвета
+            светофора. В данном случае мы получим на выходе строку "Сигнал
+            светофора - стой!".
+          </p>
+          <p class="textIndent">
+            Также конструкция switch-case может содержать несколько веток с
+            одинаковыми значениями, например:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer18">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >int number = 2; switch (number) { case 1: case 2: case 3:
+                  Console.WriteLine("Число от 1 до 3"); break; case 4: case 5:
+                  case 6: Console.WriteLine("Число от 4 до 6"); break; default:
+                  Console.WriteLine("Число вне диапазона от 1 до 6"); break;
+                  }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            B этом примере мы определяем значение `number` равным 2, затем
+            используем конструкцию switch-case, чтобы определить, в каком
+            диапазоне находится это число. В данном случае мы получим на выходе
+            строку "Число от 1 до 3".
+          </p>
+          <p class="textIndent">
+            Важно заметить, что в каждой ветке в конце стоит оператор `break`,
+            который прерывает выполнение конструкции switch-case и переходит к
+            следующей строке кода за конструкцией. Если оператор `break` не
+            будет указан, то выполнение продолжится в следующей ветке, что может
+            привести к неправильному результату.
+          </p>
+          <p class="textIndent">
+            Также в конструкции switch-case можно использовать операторы
+            `return` и `throw`, которые прерывают выполнение текущего метода и
+            возвращают результат или выбрасывают исключение соответственно.
+          </p>
+          <p class="textIndent">
+            Конструкция switch-case может быть полезной в различных задачах, где
+            необходимо выбирать различные варианты выполнения в зависимости от
+            значения переменной или выражения. Например, это может быть
+            использовано в обработке событий пользовательского интерфейса,
+            валидации входных данных, обработке ошибок и многих других случаях.
+          </p>
+          <h2>Задание</h2>
+          <ul>
+            <li class="textIndent">
+              Напишите программу, которая принимает целочисленное значение от
+              пользователя и использует конструкцию switch-case, чтобы вывести
+              на экран сообщение о том, какой день недели соответствует этому
+              значению. Например, если пользователь вводит число 2, программа
+              должна вывести на экран сообщение "Вторник".
+            </li>
+            <button class="button" onclick="toggleText('hiddenText1')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText1">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer30">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите день недели: "); string day =
+                      Console.ReadLine(); switch (day.ToLower()) { case
+                      "понедельник": Console.WriteLine("1-й день недели");
+                      break; case "вторник": Console.WriteLine("2-й день
+                      недели"); break; case "среда": Console.WriteLine("3-й день
+                      недели"); break; case "четверг": Console.WriteLine("4-й
+                      день недели"); break; case "пятница":
+                      Console.WriteLine("5-й день недели"); break; case
+                      "суббота": Console.WriteLine("6-й день недели"); break;
+                      case "воскресенье": Console.WriteLine("7-й день недели");
+                      break; default: Console.WriteLine("Неверный день недели");
+                      break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает символ от пользователя и
+              использует конструкцию switch-case, чтобы определить, является ли
+              этот символ буквой верхнего регистра, буквой нижнего регистра,
+              цифрой или знаком пунктуации. Например, если пользователь вводит
+              символ 'A', программа должна вывести на экран сообщение "Это буква
+              верхнего регистра".
+            </li>
+            <button class="button" onclick="toggleText('hiddenText2')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText2">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer18_2">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите символ: "); char ch =
+                      Console.ReadKey().KeyChar; switch (ch) { case >= 'A' and
+                      <= 'Z': Console.WriteLine("Это буква верхнего регистра");
+                      break; case >= 'a' and <= 'z': Console.WriteLine("Это
+                      буква нижнего регистра"); break; case >= '0' and <= '9':
+                      Console.WriteLine("Это цифра"); break; default:
+                      Console.WriteLine("Это знак пунктуации"); break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа перечисление
+              (enum) от пользователя и использует конструкцию switch-case, чтобы
+              выполнить различные действия в зависимости от значения
+              перечисления. Например, если перечисление имеет значения "Январь",
+              "Февраль" и т.д., программа может вывести на экран сообщение "Это
+              зимний месяц", если значение перечисления соответствует декабрю,
+              январю или февралю.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText3')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText3">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer39">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >enum Months { Январь, Февраль, Март, Апрель, Май, Июнь,
+                      Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь }
+                      Console.Write("Введите месяц: "); string monthInput =
+                      Console.ReadLine(); Months month; if
+                      (Enum.TryParse(monthInput, out month)) { switch (month) {
+                      case Months.Декабрь: case Months.Январь: case
+                      Months.Февраль: Console.WriteLine("Это зимний месяц");
+                      break; case Months.Март: case Months.Апрель: case
+                      Months.Май: Console.WriteLine("Это весенний месяц");
+                      break; case Months.Июнь: case Months.Июль: case
+                      Months.Август: Console.WriteLine("Это летний месяц");
+                      break; case Months.Сентябрь: case Months.Октябрь: case
+                      Months.Ноябрь: Console.WriteLine("Это осенний месяц");
+                      break; default: Console.WriteLine("Неизвестный месяц");
+                      break; } } else { Console.WriteLine("Ошибка ввода
+                      месяца"); }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает строку от пользователя и
+              использует конструкцию switch-case, чтобы выполнить различные
+              действия в зависимости от значения этой строки. Например, если
+              строка содержит слово "Привет", программа должна вывести на экран
+              сообщение "Приветствую тебя!".
+            </li>
+            <button class="button" onclick="toggleText('hiddenText4')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText4">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer18_3">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите строку: "); string input =
+                      Console.ReadLine(); switch (input) { case "Привет":
+                      Console.WriteLine("Приветствую тебя!"); break; case "Как
+                      дела?": Console.WriteLine("Хорошо, спасибо!"); break; case
+                      "Пока": Console.WriteLine("До свидания!"); break; default:
+                      Console.WriteLine("Неизвестная команда"); break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа bool от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные действия в зависимости от значения этой переменной.
+              Например, если значение равно true, программа должна вывести на
+              экран сообщение "Переменная равна true". Если значение равно
+              false, программа должна вывести на экран сообщение "Переменная
+              равна false".
+            </li>
+            <button class="button" onclick="toggleText('hiddenText5')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText5">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer15">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите значение переменной типа bool
+                      (true/false): "); bool input =
+                      bool.Parse(Console.ReadLine()); switch (input) { case
+                      true: Console.WriteLine("Переменная равна true"); break;
+                      case false: Console.WriteLine("Переменная равна false");
+                      break; default: Console.WriteLine("Неизвестное значение
+                      переменной"); break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа double от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные математические операции над этим значением. Например,
+              если пользователь вводит число 2.5 и оператор +, программа должна
+              вывести на экран результат сложения этого числа с другим числом.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText6')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText6">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer24">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите число: "); double number =
+                      double.Parse(Console.ReadLine()); Console.Write("Введите
+                      математический оператор (+, -, *, /): "); char op =
+                      char.Parse(Console.ReadLine()); switch (op) { case '+':
+                      Console.WriteLine("Результат: " + (number + 10)); //
+                      Пример сложения числа number с другим числом (10) break;
+                      case '-': Console.WriteLine("Результат: " + (number - 5));
+                      // Пример вычитания из числа number другого числа (5)
+                      break; case '*': Console.WriteLine("Результат: " + (number
+                      * 2)); // Пример умножения числа number на другое число
+                      (2) break; case '/': Console.WriteLine("Результат: " +
+                      (number / 3)); // Пример деления числа number на другое
+                      число (3) break; default: Console.WriteLine("Неизвестный
+                      оператор"); break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа char от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные действия в зависимости от символа. Например, если символ
+              является оператором +, программа может запрашивать два значения от
+              пользователя и выполнять сложение этих значений.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText7')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText7">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer60">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите символ операции (+, -, *, /): ");
+                      char op = char.Parse(Console.ReadLine()); switch (op) {
+                      case '+': Console.Write("Введите первое число: "); double
+                      num1 = double.Parse(Console.ReadLine());
+                      Console.Write("Введите второе число: "); double num2 =
+                      double.Parse(Console.ReadLine()); double sum = num1 +
+                      num2; Console.WriteLine("Результат сложения: " + sum);
+                      break; case '-': Console.Write("Введите первое число: ");
+                      double num3 = double.Parse(Console.ReadLine());
+                      Console.Write("Введите второе число: "); double num4 =
+                      double.Parse(Console.ReadLine()); double diff = num3 -
+                      num4; Console.WriteLine("Результат вычитания: " + diff);
+                      break; case '*': Console.Write("Введите первое число: ");
+                      double num5 = double.Parse(Console.ReadLine());
+                      Console.Write("Введите второе число: "); double num6 =
+                      double.Parse(Console.ReadLine()); double product = num5 *
+                      num6; Console.WriteLine("Результат умножения: " +
+                      product); break; case '/': Console.Write("Введите делимое:
+                      "); double dividend = double.Parse(Console.ReadLine());
+                      Console.Write("Введите делитель (отличный от нуля): ");
+                      double divisor = double.Parse(Console.ReadLine()); if
+                      (divisor != 0) { double quotient = dividend / divisor;
+                      Console.WriteLine("Результат деления: " + quotient); }
+                      else { Console.WriteLine("Деление на ноль невозможно"); }
+                      break; default: Console.WriteLine("Неизвестный оператор");
+                      break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа string от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные действия в зависимости от значения этой строки.
+              Например, если строка содержит название геометрической фигуры,
+              программа может вычислять площадь или периметр этой фигуры.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText8')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText8">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer48">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите название геометрической фигуры:
+                      "); string shape = Console.ReadLine(); switch (shape) {
+                      case "круг": Console.Write("Введите радиус круга: ");
+                      double radius = double.Parse(Console.ReadLine()); double
+                      circleArea = Math.PI * Math.Pow(radius, 2); double
+                      circlePerimeter = 2 * Math.PI * radius;
+                      Console.WriteLine("Площадь круга: " + circleArea);
+                      Console.WriteLine("Периметр круга: " + circlePerimeter);
+                      break; case "прямоугольник": Console.Write("Введите ширину
+                      прямоугольника: "); double width =
+                      double.Parse(Console.ReadLine()); Console.Write("Введите
+                      высоту прямоугольника: "); double height =
+                      double.Parse(Console.ReadLine()); double rectangleArea =
+                      width * height; double rectanglePerimeter = 2 * (width +
+                      height); Console.WriteLine("Площадь прямоугольника: " +
+                      rectangleArea); Console.WriteLine("Периметр
+                      прямоугольника: " + rectanglePerimeter); break; case
+                      "треугольник": Console.Write("Введите длину первой стороны
+                      треугольника: "); double sideA =
+                      double.Parse(Console.ReadLine()); Console.Write("Введите
+                      длину второй стороны треугольника: "); double sideB =
+                      double.Parse(Console.ReadLine()); Console.Write("Введите
+                      длину третьей стороны треугольника: "); double sideC =
+                      double.Parse(Console.ReadLine()); double trianglePerimeter
+                      = sideA + sideB + sideC; double halfPerimeter =
+                      trianglePerimeter / 2; double triangleArea =
+                      Math.Sqrt(halfPerimeter * (halfPerimeter - sideA) *
+                      (halfPerimeter - sideB) * (halfPerimeter - sideC));
+                      Console.WriteLine("Площадь треугольника: " +
+                      triangleArea); Console.WriteLine("Периметр треугольника: "
+                      + trianglePerimeter); break; default:
+                      Console.WriteLine("Неизвестная геометрическая фигура");
+                      break; }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа int от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные действия в зависимости от значения этого числа.
+              Например, если число является кодом города, программа может
+              выводить на экран название города.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText9')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText9">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer28">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >Console.Write("Введите код города: "); int cityCode =
+                      int.Parse(Console.ReadLine()); string cityName = "";
+                      switch (cityCode) { case 1: cityName = "Москва"; break;
+                      case 2: cityName = "Санкт-Петербург"; break; case 3:
+                      cityName = "Новосибирск"; break; case 4: cityName =
+                      "Екатеринбург"; break; case 5: cityName = "Казань"; break;
+                      default: cityName = "Неизвестный город"; break; }
+                      Console.WriteLine("Название города: " + cityName);</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <li class="textIndent">
+              Напишите программу, которая принимает значение типа enum от
+              пользователя и использует конструкцию switch-case, чтобы выполнить
+              различные действия в зависимости от значения этого перечисления.
+              Например, если перечисление содержит значения "Красный", "Желтый"
+              и "Зеленый", программа может выводить на экран сообщение о том,
+              какой цвет светофора в данный момент.
+            </li>
+            <button class="button" onclick="toggleText('hiddenText10')">
+              Ответ
+            </button>
+
+            <div class="fade-in" id="hiddenText10">
+              <div
+                class="inline-flex border_gray2px les2 font_size20xp background_olive"
+              >
+                <div class="border-right_grin padding_left padding_right grey">
+                  <p id="integer34">1</p>
+                </div>
+                <div class="font_size20xp">
+                  <p class="white_space white padding_right">
+                    <code class="language-csharp"
+                      >enum TrafficLightColor { Красный, Желтый, Зеленый }
+                      Console.Write("Введите текущий цвет светофора (Красный,
+                      Желтый, Зеленый): "); string userInput =
+                      Console.ReadLine(); TrafficLightColor color; if
+                      (Enum.TryParse(userInput, out color)) { switch (color) {
+                      case TrafficLightColor.Красный:
+                      Console.WriteLine("Светофор горит красным"); break; case
+                      TrafficLightColor.Желтый: Console.WriteLine("Светофор
+                      горит желтым"); break; case TrafficLightColor.Зеленый:
+                      Console.WriteLine("Светофор горит зеленым"); break;
+                      default: Console.WriteLine("Неизвестный цвет светофора");
+                      break; } } else { Console.WriteLine("Некорректный ввод
+                      цвета"); }</code
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleText(id) {
+        let text = document.getElementById(id);
+        if (text.classList.contains("active")) {
+          text.classList.remove("active");
+          setTimeout(() => {
+            text.style.display = "none";
+          }, 300);
+        } else {
+          text.style.display = "block";
+          setTimeout(() => {
+            text.classList.add("active");
+          }, 10);
+        }
+      }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

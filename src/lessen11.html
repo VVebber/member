@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Data input and output</title>
+  </head>
+  <body>
+    <div>
+      <div
+        class="flex background_black flex_dirction border_black content_center sticky-element"
+      >
+        <header id="header"></header>
+      </div>
+
+      <div class="flex">
+        <div>
+          <header
+            class="flex background_gray les3 left_m sticky-element2"
+            id="side_piece"
+          ></header>
+        </div>
+
+        <div class="lessen block">
+          <h3>
+            Основные понятия ООП: классы, объекты, инкапсуляция, наследование,
+            полиморфизм
+          </h3>
+          <p class="textIndent">
+            Объектно-ориентированное программирование (ООП) - это парадигма
+            программирования, основанная на концепциях объектов, которые могут
+            содержать данные и функциональность для их обработки. ООП позволяет
+            описывать реальные объекты и процессы, которые происходят с ними, в
+            виде программного кода.
+          </p>
+          <p>Основными концепциями ООП являются:</p>
+          <ul>
+            <li class="textIndent">
+              Инкапсуляция - это механизм, который позволяет объединять данные и
+              функциональность, работающую с этими данными, в одном объекте и
+              скрывать детали реализации от других объектов. Инкапсуляция
+              помогает защитить данные от неправильного использования и
+              обеспечить их безопасность.
+            </li>
+            <li class="textIndent">
+              Наследование - это механизм, который позволяет создавать новый
+              класс на основе уже существующего класса. Новый класс может
+              наследовать свойства и методы базового класса, а также добавлять
+              свои собственные свойства и методы. Наследование позволяет
+              повторно использовать код и создавать иерархию классов.
+            </li>
+            <li class="textIndent">
+              Полиморфизм - это механизм, который позволяет объектам с одним и
+              тем же интерфейсом работать с разными объектами, реализующими этот
+              интерфейс. Полиморфизм позволяет использовать абстрактные типы
+              данных, которые могут быть определены во время выполнения
+              программы.
+            </li>
+          </ul>
+          <p class="textIndent">
+            Вместе эти концепции обеспечивают возможность создания гибких,
+            масштабируемых и поддерживаемых программных систем.
+          </p>
+          <p class="textIndent">
+            Например, в C# можно создать класс, который представляет собой
+            структуру для хранения информации о человеке:
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer21">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >class Person { private string name; private int age; public
+                  Person(string name, int age) { this.name = name; this.age =
+                  age; } public string GetName() { return name; } public int
+                  GetAge() { return age; } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Здесь мы создали класс `Person`, который содержит приватные поля
+            `name` и `age`, конструктор для их инициализации, а также методы
+            `GetName` и `GetAge` для получения значений этих полей.
+          </p>
+          <p class="textIndent">
+            Инкапсуляция здесь заключается в том, что данные `name` и `age`
+            скрыты от других объектов и доступны только через публичные методы
+            `GetName` и `GetAge`. Наследование можно использовать, чтобы создать
+            класс `Employee`, который будет наследовать свойства и методы класса
+            `Person` и добавлять свои собственные свойства и методы, например,
+            salary.
+          </p>
+          <div
+            class="inline-flex border_gray2px les2 font_size20xp background_olive"
+          >
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer14">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p class="white_space white padding_right">
+                <code class="language-csharp"
+                  >public class Employee : Person { public double Salary { get;
+                  set; } public Employee(string name, int age, double salary) :
+                  base(name, age) { Salary = salary; } public void PrintSalary()
+                  { Console.WriteLine("Salary: {0}", Salary); } }</code
+                >
+              </p>
+            </div>
+          </div>
+          <p class="textIndent">
+            Здесь класс Employee наследует свойства и методы класса Person с
+            помощью ключевого слова `: base(name, age)`. Кроме того, он
+            добавляет свое собственное свойство Salary и метод PrintSalary.
+          </p>
+
+          <h2>Преимущества ООП:</h2>
+          <ol>
+            <li class="textIndent">
+              Модульность: ООП позволяет создавать модули, которые можно
+              использовать повторно в разных частях программы. Каждый объект
+              является самодостаточной сущностью, которую можно использовать в
+              других модулях.
+            </li>
+            <li class="textIndent">
+              Упрощение проектирования: ООП позволяет представлять программные
+              системы в виде набора объектов, каждый из которых имеет свои
+              свойства и методы. Это упрощает проектирование сложных систем, так
+              как объекты могут быть разработаны независимо друг от друга и
+              затем связаны вместе.
+            </li>
+            <li class="textIndent">
+              Наследование: ООП позволяет создавать новые классы, основанные на
+              существующих классах, что упрощает и ускоряет процесс разработки
+              программ. Кроме того, наследование позволяет избежать дублирования
+              кода.
+            </li>
+            <li class="textIndent">
+              Полиморфизм: ООП позволяет создавать объекты с одинаковым
+              интерфейсом, но с разной реализацией. Это делает код более гибким
+              и легко расширяемым.
+            </li>
+          </ol>
+          <h2>Недостатки ООП:</h2>
+          <ol>
+            <li class="textIndent">
+              Сложность: ООП может быть сложным для понимания и реализации,
+              особенно для начинающих программистов. Требуется тщательное
+              планирование и проектирование классов и объектов.
+            </li>
+            <li class="textIndent">
+              Высокая стоимость: разработка объектно-ориентированных программ
+              может быть более затратной, чем разработка процедурных программ.
+            </li>
+            <li class="textIndent">
+              Производительность: объектно-ориентированные программы могут иметь
+              меньшую производительность, чем процедурные программы, из-за
+              накладных расходов на обращение к объектам и методам.
+            </li>
+            <li class="textIndent">
+              Недостаточная гибкость: если неправильно спроектировать классы и
+              иерархии наследования, то изменение программы может быть трудным и
+              затратным.
+            </li>
+            <li class="textIndent">
+              Проблемы с безопасностью: если не учитывать правильную обработку
+              ошибок и проверку данных, то объектно-ориентированные программы
+              могут быть уязвимы для атак на безопасность.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="./One.js"></script>
+    <script src="./console.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

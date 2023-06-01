@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <title>Data types and variables</title>
+</head>
+<body>
+<div>
+  <div class="flex background_black flex_dirction border_black content_center sticky-element">
+    <header  id="header"></header>
+  </div>
+
+  <div class="flex">
+    <div>
+      <header class="flex background_gray les3 left_m sticky-element2" id="side_piece"></header>
+    </div>
+
+    <div class="lessen block"`>
+            <h1>Типы данных в C#</h1>
+            <p class="textIndent">В языке C# есть несколько типов данных, которые мы можем использовать в нашем коде. Вот некоторые из них:</p>
+        <OL>
+            <li>Целочисленные типы данных:</li>
+            <ul><li>`byte`-8 битное целое число без знака (от 0 до 255).</li>
+                <li>`sbyte`- 8 битное целое число со знаком (от -128 до 127).</li>
+                <li>`short` - 16 битное целое число со знаком (от -32768 до 32767).</li>
+                <li>`ushort` - 16 битное целое число без знака (от 0 до 65535).</li>
+                <li>`int` - 32 битное целое число со знаком (от -2147483648 до 2147483647).</li>
+                <li>`uint` - 32 битное целое число без знака (от 0 до 4294967295).</li>
+                <li>`long` - 64 битное целое число со знаком (от -9223372036854775808 до 9223372036854775807).</li>
+                <li>`ulong` - 64 битное целое число без знака (от 0 до 18446744073709551615).</li></ul>
+            <li>Вещественные типы данных:</li>
+            <ul><li>`float` - 32 битное число с плавающей запятой.</li>
+                <li>`double` - 64 битное число с плавающей запятой.</li>
+                <li>`decimal` - 128 битное число с плавающей запятой, которое используется для высокоточных вычислений.</li></ul>
+            <li>Логический тип данных:</li>
+            <ul><li>`bool` - логический тип данных, который может принимать только два значения: true или false.</li></ul>
+            <li>Символьный тип данных:</li>
+            <ul><li>`char` - 16-битный символ Unicode.</li></ul>
+            <li>Ссылочные типы данных:</li>
+            <ul><li>`string` - строка Unicode, представленная в виде объекта.</li>
+            <li>`object` - базовый класс для всех других типов данных.</li></ul>
+        </OL>
+            <p class="textIndent">Каждый тип данных имеет свои особенности и ограничения, поэтому важно выбрать правильный тип данных для каждой переменной, которую мы создаем.</p>
+      <h1>Переменные в C#</h1>
+            <p class="textIndent">Переменные в C# - это именованные области памяти, которые мы можем использовать для хранения значений. Каждая переменная имеет свой тип данных и имя.</p>
+            <p class="textIndent">Для создания переменной в C# мы указываем ее тип данных, а затем имя переменной. Например, если мы хотим создать целочисленную переменную с именем `myNumber`, мы можем написать следующий код:</p>
+
+            <div class="inline-flex border_gray2px les2  font_size20xp background_olive">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p>1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right "><code class="language-csharp">int myNumber;</code></p>
+                </div>
+            </div>
+
+            <p class="textIndent">Здесь мы создаем переменную `myNumber` типа `int`, которая будет использоваться для хранения целочисленных значений.</p>
+            <p class="textIndent">Чтобы присвоить значение переменной, мы используем оператор присваивания `=`. Например, чтобы присвоить значение 42 переменной `myNumber`, мы можем написать следующий код:</p>
+
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p>1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right "><code class="language-csharp">myNumber = 42;</code></p>
+                </div>
+            </div>
+            <p class="textIndent">При создании переменной важно учитывать ее область видимости. Область видимости переменной - это часть кода, где переменная доступна. В C# есть три типа области видимости:</p>
+            <ol>
+                <li>Локальная область видимости - переменная доступна только в блоке кода, в котором она была объявлена. Например:</li>
+                <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                    <div class="border-right_grin padding_left padding_right grey">
+                        <p id="integer5">1</p>
+                    </div>
+                    <div class="font_size20xp">
+                        <p class="white_space white padding_right"><code class="language-csharp">void MyMethod()
+{
+    int myNumber = 42; // локальная переменная
+    // ...
+}</code></p>
+                    </div>
+                </div>
+                <li>Область видимости класса - переменная доступна внутри всего класса. Например:</li>
+                <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                    <div class="border-right_grin padding_left padding_right grey">
+                        <p id="integer5_2">1</p>
+                    </div>
+                    <div class="font_size20xp">
+                        <p class="white_space white padding_right"><code class="language-csharp">void MyMethod()
+{
+    int myNumber = 42; // локальная переменная
+    // ...
+}</code></p>
+                    </div>
+                </div>
+                <li>Область видимости пространства имен - переменная доступна внутри всего пространства имен. Например:</li>
+                <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                    <div class="border-right_grin padding_left padding_right grey">
+                        <p id="integer5_3">1</p>
+                    </div>
+                    <div class="font_size20xp">
+                        <p class="white_space white padding_right"><code class="language-csharp">namespace MyNamespace
+{
+    int myNumber = 42; // переменная пространства имен
+    // ...
+}</code></p>
+                    </div>
+                </div>
+            </ol>
+            <h4>Примеры</h4>
+            <p class="textIndent">Давайте посмотрим на несколько примеров использования переменных и типов данных в C#:</p>
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer5_4">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">int myInt = 42;
+float myFloat = 3.14f;
+bool myBool = true;
+char myChar = 'A';
+string myString = "Hello, world!";</code></p>
+                </div>
+            </div>
+            <p class="textIndent">Здесь мы создаем переменные различных типов данных и присваиваем им значения. Обратите внимание, что мы добавляем суффиксы `f` и `L` к числам с плавающей запятой и длинным целым числам соответственно, чтобы указать их тип.</p>
+            <p class="textIndent">Мы также можем использовать операции над переменными. Например:</p>
+
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer7">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">int x = 5;
+int y = 10;
+int z = y + x; // здесь z будет равно 15. Здесь сложение
+int f = y - x; // здесь f будет равно 5.  Здесь вычитание
+int q = y * x; // здесь q будет равно 50. Здесь умножение
+int l = y / x; // здесь l будет равно 2.  Здесь деление
+int k = y % x; // здесь k будет равно 0.  Здесь остаток от деления</code></p>
+                </div>
+            </div>
+
+            <h4>Математические функции</h4>
+            <table style="border-collapse: collapse;">
+                <tr>
+                    <th class="border_black2px padding10px">Математическая функция</th>
+                    <th class="border_black2px padding10px">ID функции в C#</th>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">√x</td>
+                    <td class="border_black2px padding10px">Math.Sqrt(x)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">|x|</td>
+                    <td class="border_black2px padding10px">Math.Abs(x)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">e<sup>x</sup></td>
+                    <td class="border_black2px padding10px">Math.Exp(x)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">x<sup>y</sup></td>
+                    <td class="border_black2px padding10px">Math.pow(x,y)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">ln</td>
+                    <td class="border_black2px padding10px">Math.Log()</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">log <sub style="font-size:11px">10</sub></td>
+                    <td class="border_black2px padding10px">Math.Log10()</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">sin(x)</td>
+                    <td class="border_black2px padding10px">Math.Sin(x)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px"> cos(x)</td>
+                    <td class="border_black2px padding10px">Math.Cos(x)</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">tg(x)</td>
+                    <td class="border_black2px padding10px">Math.Tan(x)</td>
+                </tr>
+
+                <tr>
+                    <td class="border_black2px ">Максимальное значение</td>
+                    <td class="border_black2px ">Math.Max()</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">Минимальное значение</td>
+                    <td class="border_black2px padding10px">Math.Min()</td>
+                </tr>
+                <tr>
+                    <td class="border_black2px padding10px">Округление до ближайшего целого</td>
+                    <td class="border_black2px padding10px">Math.Round()</td>
+                </tr>
+            </table>
+
+
+
+
+            <h3>Инкремент и декремент </h3>
+            <p class="textIndent">Инкремент и декремент - это операции увеличения или уменьшения значения переменной на 1 соответственно. В языке C# существуют две формы инкремента и декремента - префиксная и постфиксная.</p>
+            <p class="textIndent">Префиксная форма инкремента/декремента сначала изменяет значение переменной, а затем возвращает ее измененное значение. Постфиксная форма сначала возвращает значение переменной, а затем изменяет его.</p>
+            <p class="">Рассмотрим примеры:</p>
+
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer3">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">// постфиксная форма инкремента
+int a = 5;
+int b = a++; // b=5, a=6</code></p>
+                </div>
+            </div>
+            <p class="textIndent">В этом случае значение переменной a увеличивается на 1 после того, как она была присвоена переменной b. Поэтому в результате выполнения этого кода значение b равно 5, а значение a равно 6.</p>
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer3_2">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">// постфиксная форма декремента
+int a = 5;
+int b = a--; // b=5, a=4</code></p>
+                </div>
+            </div>
+            <p class="textIndent">В этом случае значение переменной a уменьшается на 1 после того, как она была присвоена переменной b. Поэтому в результате выполнения этого кода значение b равно 5, а значение a равно 4.</p>
+
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer3_3">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">// префиксная форма инкремента
+int a = 5;
+int b = ++a; // b=6, a=6</code></p>
+                </div>
+            </div>
+            <p class="textIndent">В этом случае значение переменной a увеличивается на 1 до того, как она была присвоена переменной b. Поэтому в результате выполнения этого кода значение b равно 6, а значение a также равно 6.</p>
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p id="integer3_4">1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">// префиксная форма инкремента
+int a = 5;
+int b = --a; // b=4, a=4</code></p>
+                </div>
+            </div>
+            <p class="textIndent">В этом случае значение переменной a уменьшается на 1 до того, как она была присвоена переменной b. Поэтому в результате выполнения этого кода значение b равно 4, а значение a также равно 4.</p>
+            <P class="textIndent">Префиксная и постфиксная формы инкремента и декремента могут использоваться в различных ситуациях, например, для увеличения или уменьшения счетчика цикла или для изменения значения переменной в зависимости от условия. При выборе между префиксной и постфиксной формой необходимо учитывать порядок выполнения операций и требования конкретной задачи.</P>
+            <h3>Константы</h3>
+            <p class="textIndent">Константы представляют собой данные, которые не могут быть изменены во время выполнения программы. Давайте более подробно рассмотрим, что это такое и как использовать константы в C#.</p>
+            <p class="textIndent">В C# константы объявляются с помощью ключевого слова const. Синтаксис объявления константы выглядит следующим образом:</p>
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p>1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">const "тип" "имя" = "значение";</code></p>
+                </div>
+            </div>
+            <ol>
+                <li>`"тип"` - тип данных константы.</li>
+                <li>`"имя"` - имя константы.</li>
+                <li>`"значение"` - значение константы.</li>
+            </ol>
+            <p class="textIndent">Для примера, объявим константу для хранения значения числа Пи:</p>
+            <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                    <p>1</p>
+                </div>
+                <div class="font_size20xp">
+                    <p class="white_space white padding_right"><code class="language-csharp">const double PI = 3.14159;</code></p>
+                </div>
+            </div>
+            <h3>Заключение</h3>
+            <p class="textIndent">В этой лекции мы рассмотрели основные типы данных и переменные в языке C#. Мы также рассмотрели, как создавать переменные и как присваивать им значения. Знание типов данных и переменных является фундаментальным для программирования на C#, поскольку они позволяют нам хранить и обрабатывать данные в программе. Мы также рассмотрели области видимости переменных и операции над ними.</p>
+            <p class="textIndent">Однако, это далеко не все, что стоит знать о типах данных и переменных в C#. Например, в C# есть также специальный тип данных enum, который позволяет создавать перечисления значений. Есть также различные модификаторы доступа переменных, которые позволяют управлять их доступностью внутри и снаружи класса.</p>
+            <p class="textIndent">Кроме того, в C# есть множество других типов данных, включая массивы, списки, словари, структуры, классы и интерфейсы. Эти типы данных предоставляют более сложные способы хранения и обработки данных в программе.</p>
+            <p class="textIndent">Важно помнить, что правильное использование типов данных и переменных - это ключевой аспект разработки программ на C#. Правильное использование типов данных и переменных может помочь избежать ошибок и улучшить производительность программы.</p>
+
+
+            <h3>Задание:</h3>
+            <p class="textIndent">Записать арифметические выражения на алгоритмическом языке и указать порядок выполнения операций</p>
+            <img src="../foto/zadanie1.jpeg" width="1100vw" >
+            <h2>Ответы:</h2>
+<div style="margin-top: 50px;">
+    
+<button class="button" onclick="toggleText('hiddenText')">Задание 1</button>
+
+<div  class="fade-in" id="hiddenText">
+    <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+            <p id="integer4_2">1</p>
+        </div>
+        <div class="font_size20xp">
+        <p  class="white_space white padding_right"><code class="language-csharp">double y1, f1;
+y1 = int.Parse(Console.ReadLine()); // значение y
+f1 = int.Parse(Console.ReadLine()); // значение f
+Console.WriteLine("G={0}", (Math.Exp(2*y1)+Math.Sin(f1))/(Math.Log(3.8*y1+f1)));</code></p>  
+        </div>
+    </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText2')">Задание 2</button>
+
+<div class="fade-in"  id="hiddenText2">
+    <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+            <p id="integer4_3">1</p>
+        </div>
+        <div class="font_size20xp">
+        <p  class="white_space white padding_right"><code class="language-csharp">double d2, y2;
+d2 = int.Parse(Console.ReadLine()); // значение d
+y2 = int.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("F={0}", Math.Log(d2) + ((3.5 * Math.Pow(d2, 2)) + 1) / Math.Cos(2 * y2));</code></p>
+        </div>
+    </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText3')">Задание 3</button>
+
+<div class="fade-in" id="hiddenText3">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+    <div class="border-right_grin padding_left padding_right grey">
+      <p id="integer4_4">1</p>
+    </div>
+    <div class="font_size20xp">
+      <p  class="white_space white padding_right"><code class="language-csharp">double k3, y3;
+k3 = int.Parse(Console.ReadLine()); // значение k
+y3 = int.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("U={0}", (Math.Log(k3 - y3) + Math.Pow(y3, 4)) / (Math.Exp(y3) + 2.355 * Math.Pow(k3, 2)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText4')">Задание 4</button>
+        
+<div class="fade-in" id="hiddenText4">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_5">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double w4, y4;
+w4 = int.Parse(Console.ReadLine()); // значение w
+y4 = int.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("G={0}", (9.33 * Math.Pow(w4, 3) + Math.Sqrt(w4)) / (Math.Log(y4 + 3.55) + Math.Sqrt(y4)));
+</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText5')">Задание 5</button>
+        
+<div class="fade-in" id="hiddenText5">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_6">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double a, t, y, D;
+a = double.Parse(Console.ReadLine()); // значение a
+t = double.Parse(Console.ReadLine()); // значение t
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("D={0}",((7.8 * Math.Pow(a, 2)) + (3.52 * t)) / (Math.Log(a + (2 * y)) + Math.Pow(Math.E, 2)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText6')">Задание 6</button>
+        
+<div class="fade-in" id="hiddenText6">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer3_5">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double i = double.Parse(Console.ReadLine()); // значение i в градусах
+double y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("L={0}", (0.81 * Math.Cos(Math.PI * i / 180)) / (Math.Log(y) + 2 * Math.Pow(y, 2)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText7')">Задание 7</button>
+        
+<div class="fade-in" id="hiddenText7">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_7">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double m, y;
+m = double.Parse(Console.ReadLine()); // значение m
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("N={0}", ((m * m) + 2.8 * m + 0.355) / (Math.Cos(2 * y) + 3.6));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div style="margin-top: 20px;"> 
+
+<button class="button" onclick="toggleText('hiddenText8')">Задание 8</button>
+        
+<div class="fade-in" id="hiddenText8">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_8">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double t, y;
+t = double.Parse(Console.ReadLine()); // значение t в радианах
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("T={0}", (2.37 * Math.Sin(t + 1)) / Math.Sqrt((4.0 * y * y) - (0.1 * y) + 5.0));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText9')">Задание 9</button>
+        
+<div class="fade-in" id="hiddenText9">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_9">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double w, y;
+w = int.Parse(Console.ReadLine()); // значение w
+y = int.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("V={0}", Math.Pow((y + 2 * w), 3) / (Math.Log(y + 0.75)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText10')">Задание 10</button>
+        
+<div class="fade-in" id="hiddenText10">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_10">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double t, y;
+t = double.Parse(Console.ReadLine()); // значение t
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("Z={0}", (2 * t + y * Math.Cos(t)) / Math.Sqrt(y + 4.831));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText11')">Задание 11</button>
+        
+<div class="fade-in" id="hiddenText11">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_11">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, n;
+y = double.Parse(Console.ReadLine()); // значение y
+n = double.Parse(Console.ReadLine()); // значение n
+Console.WriteLine("D={0}", Math.Pow(y, 2) + (0.5 * n + 4.8) / Math.Sin(y));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText12')">Задание 12</button>
+        
+<div class="fade-in" id="hiddenText12">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_12">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double t, y, R;
+t = double.Parse(Console.ReadLine()); // значение t
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("R = {0}", R ((Math.Pow(Math.Sin(2 * t + 1), 2) + 0.3) / Math.Log(t + y)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText13')">Задание 13</button>
+        
+<div class="fade-in" id="hiddenText13">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_13">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, h;
+y = double.Parse(Console.ReadLine()); // значение y
+h = double.Parse(Console.ReadLine()); // значение h
+Console.WriteLine("A={0}", (Math.Sin(2 * y + h) + Math.Pow(h, 2)) / (Math.Exp(h) + y));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div style="margin-top: 20px;">
+    <button class="button" onclick="toggleText('hiddenText14')">Задание 14</button>
+
+    <div class="fade-in" id="hiddenText14">
+        <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4_14">1</p>
+            </div>
+            <div class="font_size20xp">
+                <p  class="white_space white padding_right"><code class="language-csharp">double y, h;
+y = double.Parse(Console.ReadLine());
+h = double.Parse(Console.ReadLine());
+Console.WriteLine("P={0}", (Math.Exp(y + 2.5) + 7.1 * Math.Pow(h, 3)) / Math.Log(Math.Sqrt(y + 0.04 * h)));</code></p>
+          </div>
+        </div>
+      </div>
+
+<button class="button" onclick="toggleText('hiddenText15')">Задание 15</button>
+        
+<div class="fade-in" id="hiddenText15">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_15">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y,j;    
+y = double.Parse(Console.ReadLine()); // значение y
+j = double.Parse(Console.ReadLine()); // значение j
+Console.WriteLine("F={0}", (2 * Math.Sin(0.354 * y + 1)) / Math.Log(y + 2 * j));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText16')">Задание 16</button>
+        
+<div class="fade-in" id="hiddenText16">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer5_5">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double t, r, y;
+t = double.Parse(Console.ReadLine()); // значение t
+r = double.Parse(Console.ReadLine()); // значение r
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("W = {0}", (4 * Math.Pow(t, 3) + Math.Log(r)) / ((Math.Exp(y + r) + 7.2) * Math.Sin(r)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText17')">Задание 17</button>
+        
+<div class="fade-in" id="hiddenText17">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_16">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, n;
+y = double.Parse(Console.ReadLine()); // значение y
+n = double.Parse(Console.ReadLine()); // значение n
+Console.WriteLine("H={0}", (Math.Pow(y, 2) - 0.8 * y + Math.Sqrt(y)) / (23.1 * Math.Pow(n, 2) * Math.Cos(n)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText18')">Задание 18</button>
+        
+<div class="fade-in" id="hiddenText18">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_17">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, k;
+y = double.Parse(Console.ReadLine()); // значение y
+k = double.Parse(Console.ReadLine()); // значение k
+Console.WriteLine("R = {0}", Math.Sqrt(Math.Pow(Math.Sin(y), 2) + 6.835) / (Math.Log(y + k) * 3 * Math.Pow(y, 2)));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div style="margin-top: 20px;">
+
+    <button class="button" onclick="toggleText('hiddenText19')">Задание 19</button>
+        
+    <div class="fade-in" id="hiddenText19">
+      <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+          <div class="border-right_grin padding_left padding_right grey">
+            <p id="integer4_18">1</p>
+          </div>
+          <div class="font_size20xp">
+              <p  class="white_space white padding_right"><code class="language-csharp">double y, q;
+y = double.Parse(Console.ReadLine()); // значение y
+q = double.Parse(Console.ReadLine()); // значение q
+Console.WriteLine("E={0}", Math.Log(0.7 * y + 2 * q) / Math.Sqrt(3 * Math.Pow(y, 2) + 0.5 * y + 4));</code></p>
+        </div>
+      </div>
+    </div>
+
+<button class="button" onclick="toggleText('hiddenText20')">Задание 20</button>
+        
+<div class="fade-in" id="hiddenText20">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer5_6">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double t, l, y;
+t = double.Parse(Console.ReadLine()); // значение t
+l = double.Parse(Console.ReadLine()); // значение l
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("K={0}", ((2 * Math.Pow(t, 2)) + 3 * l + 7.2) / Math.Log(y + Math.Exp(2 * l)));   </code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText21')">Задание 21</button>
+        
+<div class="fade-in" id="hiddenText21">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer6">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double k, p, x, d;
+k = double.Parse(Console.ReadLine());
+p = double.Parse(Console.ReadLine());
+x = double.Parse(Console.ReadLine());
+d = double.Parse(Console.ReadLine());
+Console.WriteLine("Q = {0}", Math.Sqrt((k + 2.6 * p * Math.Sin(k)) / (x - Math.Pow(d, 3))));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText22')">Задание 22</button>
+        
+<div class="fade-in" id="hiddenText22">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_19">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, t;
+y = double.Parse(Console.ReadLine()); // значение y
+t = double.Parse(Console.ReadLine()); // значение t
+Console.WriteLine("S={0}", (4.351 * Math.Pow(y, 3) + 2 * t + Math.Log(t)) / Math.Sqrt(Math.Cos(2 * y) + 4.351));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div style="margin-top: 20px;">
+<button class="button" onclick="toggleText('hiddenText23')">Задание 23</button>
+        
+<div class="fade-in" id="hiddenText23">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_20">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, d;
+y = double.Parse(Console.ReadLine()); // значение y
+d = double.Parse(Console.ReadLine()); // значение d
+Console.WriteLine("R = {0}", ((Math.Pow(Math.Sin(y), 2) + 0.3 * d) / (Math.Exp(y) + Math.Log(d))));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText24')">Задание 24</button>
+        
+<div class="fade-in" id="hiddenText24">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_21">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double k, y;
+k = double.Parse(Console.ReadLine()); // значение k
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("U={0}", Math.Log(2 * k + 4.3) / (Math.Exp(k + y) + Math.Sqrt(y)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText25')">Задание 25</button>
+        
+<div class="fade-in" id="hiddenText25">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_22">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double c, t, result;
+c = double.Parse(Console.ReadLine()); // значение c
+t = double.Parse(Console.ReadLine()); // значение t
+Console.WriteLine("L={0}", Math.Pow(Math.Cos(c), 2) + ((3 * Math.Pow(t, 2)) + 4) / Math.Sqrt(c + t));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div style="margin-top: 20px;">
+<button class="button" onclick="toggleText('hiddenText26')">Задание 26</button>
+        
+<div class="fade-in" id="hiddenText26">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_23">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double u, y;
+u = double.Parse(Console.ReadLine()); // значение u
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("T = {0}", Math.Sin(2*u) / Math.Log(2*y+u));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText27')">Задание 27</button>
+        
+<div class="fade-in" id="hiddenText27">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_25">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, p;
+y = double.Parse(Console.ReadLine());
+p = double.Parse(Console.ReadLine());
+Console.WriteLine("Z = {0}", (Math.Pow(Math.Sin(p + 0.4), 2)) / ((Math.Pow(y, 2)) + 7.325 * p));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText28')">Задание 28</button>
+        
+<div class="fade-in" id="hiddenText28">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_26">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double v, y;
+v = double.Parse(Console.ReadLine()); // значение v
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("W={0}", (0.004 * v + Math.Exp(2 * y) / Math.Exp(y / 2)));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div style="margin-top: 20px;">
+<button class="button" onclick="toggleText('hiddenText29')">Задание 29</button>
+        
+<div class="fade-in" id="hiddenText29">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_27">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double h, y;
+h = double.Parse(Console.ReadLine()); // значение h
+y = double.Parse(Console.ReadLine()); // значение y
+Console.WriteLine("T={0}", ((0.355 * Math.Pow(h, 2)) - 4.355) / ((Math.Exp(y + h)) + Math.Sqrt(2.7 * y)));</code></p>
+    </div>
+  </div>
+</div>
+
+<button class="button" onclick="toggleText('hiddenText30')">Задание 30</button>
+        
+<div class="fade-in" id="hiddenText30">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_28">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">double y, p, N;
+y = double.Parse(Console.ReadLine()); // значение y
+p = double.Parse(Console.ReadLine()); // значение p
+Console.WriteLine("N = {0}", ((3 * Math.Pow(y, 2)) + Math.Sqrt(y + 1)) / (Math.Log(p + y) + Math.Exp(p)));</code></p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  function toggleText(id) {
+    let text = document.getElementById(id);
+    if (text.classList.contains("active")) {
+      text.classList.remove("active");
+      setTimeout(() => {
+        text.style.display = "none";
+      }, 300);
+    } else {
+      text.style.display = "block";
+      setTimeout(() => {
+        text.classList.add("active");
+      }, 10);
+    }
+  }
+</script>
+
+<script src="./One.js"></script>
+    <script src="./console.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <title>Data input and output</title>
+</head>
+<body>
+<div>
+  <div class="flex background_black flex_dirction border_black content_center sticky-element">
+    <header  id="header"></header>
+  </div>
+
+  <div class="flex">
+    <div>
+      <header class="flex background_gray les3 left_m sticky-element2" id="side_piece"></header>
+    </div>
+
+    <div class="lessen block"`>
+      <h1>Циклы</h1>
+      <p class="textIndent">Циклы – это один из наиболее часто используемых элементов языка программирования C#, который позволяет выполнять повторяющиеся операции несколько раз.</p>
+      <p class="textIndent">C# поддерживает три вида циклов: `for`, `while` и `do-while`. Каждый из них имеет свои особенности и может использоваться в различных ситуациях.      </p>
+      <h3>Цикл for</h3>
+      <p class="textIndent">Цикл `for` используется для повторения блока кода заданное количество раз. Синтаксис цикла for выглядит следующим образом:     </p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">for (инициализация; условие; итерация)
+{
+  // тело цикла
+}</code></p>
+        </div>
+      </div>
+      <ul>
+        <li class="textIndent">`инициализация` - выполняется только один раз перед началом цикла и используется для инициализации переменных.        </li>
+        <li class="textIndent">`условие` - определяет, должен ли цикл продолжаться. Если условие истинно, то тело цикла выполняется, иначе цикл завершается.        </li>
+        <li class="textIndent">`итерация` - выполняется после каждого выполнения тела цикла и используется для изменения переменных.        </li>
+      </ul>
+      <p class="textIndent">Пример использования цикла `for`:      </p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">for (int i = 1; i <= 10; i++)
+{
+  Console.WriteLine(i);
+}</code></p>
+        </div>
+      </div>
+      <p class="textIndent">В этом примере мы создаем переменную `i` и инициализируем ее значением 1. Условие цикла указывает, что цикл должен выполняться, пока значение переменной `i` меньше или равно 10. После каждого выполнения тела цикла значение переменной `i` увеличивается на 1. В результате на консоль будут выведены числа от 1 до 10.</p>
+      <h3>Цикл while</h3>
+      <p class="textIndent">Цикл `while` используется для повторения блока кода до тех пор, пока определенное условие истинно. Синтаксис цикла while выглядит следующим образом:      </p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4_3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">while (условие)
+{
+  // тело цикла
+}</code></p>
+        </div>
+      </div>
+      <ul><li class="textIndent">`условие` – определяет, должен ли цикл продолжаться. Если условие истинно, то тело цикла выполняется, иначе цикл завершается.
+      </li></ul>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer7">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">int i = 1;
+
+while (i <= 10)
+{
+  Console.WriteLine(i);
+  i++;
+}</code></p>
+        </div>
+      </div>
+      <p class="textIndent">В этом примере мы создаем переменную `i` и инициализируем ее значением 1. Условие цикла указывает, что цикл должен выполняться, пока значение переменной `i` меньше или равно 10. После каждого выполнения тела цикла значение переменной `i` увеличивается на 1. В результате на консоль будут выведены числа от 1 до 10.</p>
+      <h3>Цикл do-while</h3>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4_4">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">do
+{
+  // тело цикла
+} while (условие);</code></p>
+        </div>
+      </div>
+      <ul><li class="textIndent">`условие` – определяет, должен ли цикл продолжаться. Если условие истинно, то тело цикла выполняется, иначе цикл завершается.
+      </li></ul>
+      <p class="textIndent">Пример использования цикла `do-while`:</p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer7_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">int i = 1;
+
+do
+{
+  Console.WriteLine(i);
+  i++;
+} while (i <= 10);</code></p>
+        </div>
+      </div>
+      <p class="textIndent">В этом примере мы создаем переменную `i` и инициализируем ее значением 1. Тело цикла выполняется хотя бы один раз, так как условие не проверяется до первого выполнения тела цикла. Условие цикла указывает, что цикл должен выполняться, пока значение переменной `i` меньше или равно 10. После каждого выполнения тела цикла значение переменной `i` увеличивается на 1. В результате на консоль будут выведены числа от 1 до 10.      </p>
+      <h3>Прерывание цикла</h3>
+      <p class="textIndent">Иногда возникает необходимость прервать выполнение цикла до завершения всех итераций. Для этого в C# используется оператор break. Он позволяет выйти из цикла, даже если условие еще не стало ложным. Пример использования оператора `break`:      </p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer8">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">for (int i = 1; i <= 10; i++)
+{
+  if (i == 5)
+  {
+    break;
+  }
+  Console.WriteLine(i);
+}</code></p>
+        </div>
+      </div>
+      <P class="textIndent">В этом примере цикл `for` выполняется до тех пор, пока значение переменной `i` меньше или равно 10. Если значение переменной `i` равно 5, то оператор `break` прерывает выполнение цикла. В результате на консоль будут выведены числа от 1 до 4.</P>
+      <P class="textIndent">Еще один оператор, который может использоваться в циклах – это `continue`. Он позволяет пропустить текущую итерацию цикла и перейти к следующей. Пример использования оператора `continue`:      </P>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer8_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">for (int i = 1; i <= 10; i++)
+{
+  if (i % 2 == 0)
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+}</code></p>
+        </div>
+      </div>
+      <P class="textIndent">В этом примере цикл `for` выполняется до тех пор, пока значение переменной `i` меньше или равно 10. Если значение переменной `i` является четным, то оператор continue пропускает текущую итерацию цикла, и переходит к следующей. В результате на консоль будут выведены нечетные числа от 1 до 9.      </P>
+      <H3>Циклы foreach      </H3>
+      <P class="textIndent">Цикл `foreach` используется для перебора элементов коллекций или массивов. Синтаксис цикла `foreach` выглядит следующим образом:      </P>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4_5">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">foreach (тип_элемента переменная_элемента in коллекция)
+{
+  // тело цикла
+}</code></p>
+        </div>
+      </div>
+      <ul>
+        <li class="textIndent">`тип_элемента` – тип элементов в коллекции;        </li>
+        <li class="textIndent">`переменная_элемента` – переменная, которая будет хранить текущий элемент коллекции;        </li>
+        <li class="textIndent">`коллекция` – коллекция или массив, который будет перебираться в цикле.        </li>
+      </ul>
+      <p class="textIndent">Пример использования цикла `foreach` для перебора элементов массива:      </p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer5">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">int[] numbers = { 1, 2, 3, 4, 5 };
+foreach (int number in numbers)
+{
+  Console.WriteLine(number);
+}</code></p>
+        </div>
+      </div>
+      <p class="textIndent">В этом примере мы создаем массив numbers, который содержит пять целочисленных элементов. Затем мы используем цикл `foreach`, чтобы перебрать элементы массива и вывести их на консоль.      </p>
+      <p class="textIndent">Пример использования цикла `foreach` для перебора элементов списка:</p>
+      <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer5_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p class="white_space white padding_right"><code class="language-csharp">List<string> names = new List<string>() { "Alice", "Bob", "Charlie" };
+foreach (string name in names)
+{
+  Console.WriteLine(name);
+}</code></p>
+        </div>
+      </div>
+      <p class="textIndent">В этом примере мы создаем список `names`, который содержит три строки. Затем мы используем цикл `foreach`, чтобы перебрать элементы списка и вывести их на консоль.      </p>
+      <p class="textIndent">Использование циклов является важной частью программирования, и хорошее знание работы с циклами может существенно улучшить производительность и качество вашего кода.      </p>        
+      <h2>Задание</h2>
+      <ul>
+        <li>Вывести все числа от 1 до 10 в консоль, используя цикл for.</li>
+<button class="button" onclick="toggleText('hiddenText1')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText1">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer4_6">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine(i);
+}</code></p>
+    </div>
+  </div>
+</div>
+        
+        <li>Вывести все четные числа от 1 до 20 в консоль, используя цикл while.</li>
+<button class="button" onclick="toggleText('hiddenText2')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText2">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer7_3">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int number = 2;
+
+while (number <= 20)
+{
+    Console.WriteLine(number);
+    number += 2;
+}</code></p>
+    </div>
+  </div>
+</div>
+
+        <li>Написать программу, которая запрашивает у пользователя число и выводит таблицу умножения для этого числа от 1 до 10, используя цикл for.</li>
+<button class="button" onclick="toggleText('hiddenText3')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText3">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer8_3">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= 10; i++)
+{
+    int result = number * i;
+    Console.WriteLine($"{number} * {i} = {result}");
+}</code></p>
+    </div>
+  </div>
+</div>
+       
+        <li>Посчитать сумму всех чисел от 1 до 100, используя цикл while.</li>
+<button class="button" onclick="toggleText('hiddenText4')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText4">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer10_4">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int sum = 0;
+int number = 1;
+
+while (number <= 100)
+{
+    sum += number;
+    number++;
+}
+
+Console.WriteLine($"Сумма всех чисел от 1 до 100: {sum}");</code></p>
+    </div>
+  </div>
+</div>
+
+        <li>Написать программу, которая запрашивает у пользователя число и проверяет, является ли оно простым (делится только на 1 и само себя). Используйте цикл for для проверки делителей числа.</li>
+<button class="button" onclick="toggleText('hiddenText5')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText5">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer22">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool isPrime = true;
+
+for (int i = 2; i < number; i++)
+{
+    if (number % i == 0)
+    {
+        isPrime = false;
+        break;
+    }
+}
+
+if (isPrime)
+{
+    Console.WriteLine($"{number} - простое число.");
+}
+else
+{
+    Console.WriteLine($"{number} - не является простым числом.");
+}</code></p>
+    </div>
+  </div>
+</div>
+        
+        <li>Написать программу, которая запрашивает у пользователя число и вычисляет его факториал (произведение всех чисел от 1 до этого числа). Используйте цикл for для вычисления факториала.</li>
+<button class="button" onclick="toggleText('hiddenText7')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText7">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer11_2">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int factorial = 1;
+
+for (int i = 1; i <= number; i++)
+{
+    factorial *= i;
+}
+
+Console.WriteLine($"Факториал числа {number}: {factorial}");</code></p>
+    </div>
+  </div>
+</div>
+     
+        <li>Написать программу, которая выводит все числа Фибоначчи до определенного значения, запрашиваемого у пользователя. Числа Фибоначчи получаются путем сложения двух предыдущих чисел: 0, 1, 1, 2, 3, 5, 8 и т.д. Используйте цикл while или do-while для вычисления чисел Фибоначчи.</li>
+<button class="button" onclick="toggleText('hiddenText8')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText8">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer17">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите значение: ");
+int limit = Convert.ToInt32(Console.ReadLine());
+
+int previous = 0;
+int current = 1;
+
+Console.Write($"{previous}, {current}");
+
+while (current < limit)
+{
+    int next = previous + current;
+    Console.Write($", {next}");
+    previous = current;
+    current = next;
+}
+
+Console.WriteLine();</code></p>
+    </div>
+  </div>
+</div>
+       
+        <li>Напишите программу, которая запрашивает у пользователя несколько чисел (завершение ввода при вводе 0) и выводит их сумму, используя цикл do-while.</li>
+<button class="button" onclick="toggleText('hiddenText9')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText9">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer11_3">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int sum = 0;
+int number;
+
+do
+{
+    Console.Write("Введите число (для завершения введите 0): ");
+    number = Convert.ToInt32(Console.ReadLine());
+    sum += number;
+} while (number != 0);
+
+Console.WriteLine($"Сумма введенных чисел: {sum}");
+</code></p>
+    </div>
+  </div>
+</div>
+
+        <li>Напишите программу, которая запрашивает у пользователя число и выводит все его делители. Используйте цикл for для проверки делителей числа.</li>
+    <button class="button" onclick="toggleText('hiddenText10')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText10">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer11_4">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Делители числа {0}:", number);
+for (int i = 1; i <= number; i++)
+{
+    if (number % i == 0)
+    {
+        Console.WriteLine(i);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+    
+        <li>Напишите программу, которая выводит все простые числа от 1 до 100 в консоль. Используйте цикл for и проверку на простоту числа.</li>
+        <button class="button" onclick="toggleText('hiddenText11')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText11">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer19">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.WriteLine("Простые числа от 1 до 100:");
+
+for (int number = 2; number <= 100; number++)
+{
+    bool isPrime = true;
+    for (int i = 2; i <= Math.Sqrt(number); i++)
+    {
+        if (number % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime)
+    {
+        Console.WriteLine(number);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+        
+        <li>Создайте программу, которая запрашивает у пользователя слово и выводит его в обратном порядке. Используйте цикл for или while для перебора символов строки.</li>
+<button class="button" onclick="toggleText('hiddenText12')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText12">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer9">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите слово: ");
+string word = Console.ReadLine();
+
+Console.Write("Слово в обратном порядке: ");
+for (int i = word.Length - 1; i >= 0; i--)
+{
+    Console.Write(word[i]);
+}
+Console.WriteLine();</code></p>
+    </div>
+  </div>
+</div>
+        
+        <li>Напишите программу, которая выводит все буквы алфавита от A до Z в консоль в верхнем регистре. Используйте цикл for и преобразование чисел в символы ASCII.</li>
+<button class="button" onclick="toggleText('hiddenText13')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText13">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer8_4">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.WriteLine("Алфавит:");
+
+for (int i = (int)'A'; i <= (int)'Z'; i++)
+{
+    char letter = (char)i;
+    Console.Write(letter);
+}
+Console.WriteLine();</code></p>
+    </div>
+  </div>
+</div>
+        
+        <li>Напишите программу, которая запрашивает у пользователя число и проверяет, является ли оно палиндромом (читается одинаково слева направо и справа налево). Используйте циклы и операции сравнения для проверки палиндрома.</li>
+       <button class="button" onclick="toggleText('hiddenText14')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText14">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer21">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int originalNumber = number;
+int reversedNumber = 0;
+
+while (number > 0)
+{
+    int digit = number % 10;
+    reversedNumber = reversedNumber * 10 + digit;
+    number /= 10;
+}
+
+if (originalNumber == reversedNumber)
+{
+    Console.WriteLine("Число является палиндромом.");
+}
+else
+{
+    Console.WriteLine("Число не является палиндромом.");
+}</code></p>
+    </div>
+  </div>
+</div>
+
+        <li>Создайте программу, которая запрашивает у пользователя строку и выводит количество гласных (букв "a", "e", "i", "o", "u", "y") в этой строке. Используйте цикл foreach для перебора символов строки.</li>
+<button class="button" onclick="toggleText('hiddenText15')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText15">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer15">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите строку: ");
+string input = Console.ReadLine();
+
+int vowelCount = 0;
+
+foreach (char c in input)
+{
+    char lowercase = Char.ToLower(c);
+    if (lowercase == 'a' || lowercase == 'e' || lowercase == 'i' || lowercase == 'o' || lowercase == 'u' || lowercase == 'y')
+    {
+        vowelCount++;
+    }
+}
+
+Console.WriteLine("Количество гласных в строке: {0}", vowelCount);</code></p>
+    </div>
+  </div>
+</div>
+      
+        <li>Создайте программу, которая выводит все простые числа в диапазоне от X до Y, где X и Y - значения, запрашиваемые у пользователя. Используйте цикл for и проверку на простоту числа.</li>
+<button class="button" onclick="toggleText('hiddenText16')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText16">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer25">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">Console.Write("Введите начальное значение диапазона: ");
+int start = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите конечное значение диапазона: ");
+int end = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Простые числа в диапазоне от {0} до {1}:", start, end);
+
+for (int number = start; number <= end; number++)
+{
+    bool isPrime = true;
+    for (int i = 2; i <= Math.Sqrt(number); i++)
+    {
+        if (number % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime && number > 1)
+    {
+        Console.WriteLine(number);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>        
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+<script>
+  function toggleText(id) {
+    let text = document.getElementById(id);
+    if (text.classList.contains("active")) {
+      text.classList.remove("active");
+      setTimeout(() => {
+        text.style.display = "none";
+      }, 300);
+    } else {
+      text.style.display = "block";
+      setTimeout(() => {
+        text.classList.add("active");
+      }, 10);
+    }
+  }
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>

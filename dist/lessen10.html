@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <title>Data input and output</title>
+<script defer src="bundle.js"></script></head>
+<body>
+<div>
+  <div class="flex background_black flex_dirction border_black content_center sticky-element">
+    <header  id="header"></header>
+  </div>
+
+  <div class="flex">
+    <div>
+      <header class="flex background_gray les3 left_m sticky-element2" id="side_piece"></header>
+    </div>
+
+    <div class="lessen block">
+      <h1>функции и процедуры</h1>
+      <p class="textIndent">Концепция функций в C# похожа на другие языки программирования, такие как C++, Java и Python. Функция - это фрагмент кода, который выполняет определенную операцию и может быть вызван из другой части программы. Они очень полезны, когда требуется повторное использование кода, когда необходимо выполнить одну и ту же операцию несколько раз в разных местах программы.      </p>
+      <p class="textIndent">Синтаксис объявления функции:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">[модификаторы доступа] [возвращаемый тип] ИмяФункции([параметры])
+{
+    // тело функции
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Модификаторы доступа определяют область видимости функции в программе. Наиболее часто используемые модификаторы доступа в C#:      </p>
+      <ul>
+        <li>public: функция может быть вызвана из любой части программы.        </li>
+        <li>private: функция может быть вызвана только из той же класса, в котором она объявлена.        </li>
+        <li>protected: функция может быть вызвана из того же класса или из его производных классов.        </li>
+        <li>internal: функция может быть вызвана из любого места в текущей сборке.        </li>
+      </ul>
+      <p class="textIndent">Возвращаемый тип определяет тип данных, который функция вернет при своем вызове. Если функция не должна возвращать значение, то ее возвращаемый тип должен быть void.      </p>
+      <p class="textIndent">Параметры - это значения, которые передаются функции при ее вызове. Они могут быть определены как значения типов данных, таких как int, float, string, и т.д., или же объектов классов.      </p>
+      <p class="textIndent">Пример объявления функции, которая принимает два целочисленных параметра и возвращает их сумму:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer5 ">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">public int Sum(int a, int b)
+{
+    int result = a + b;
+    return result;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">В этом примере модификатор доступа public означает, что функция Sum может быть вызвана из любого места программы. Возвращаемый тип - int, что означает, что функция вернет целочисленное значение. Параметры a и b имеют тип int и будут использоваться в теле функции.`      </p>
+      <p class="textIndent">Пример вызова этой функции:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer4_3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int x = 10;
+int y = 20;
+int result = Sum(x, y);
+Console.WriteLine(result); // Выведет 30</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">В этом примере мы объявляем две переменные, x и y, которые будут переданы в качестве аргументов функции Sum. Результат функции сохраняется в переменной result, которая затем выводится на консоль.      </p>
+      
+      
+
+      
+      <p class="textIndent">Функции могут быть перегружены, то есть функции с одним и тем же именем могут иметь различные списки параметров. Это позволяет использовать одно и то же имя функции для разных операций      </p>
+      <p class="textIndent">Например, допустим, мы хотим иметь функцию, которая складывает два целых числа, а также функцию, которая складывает два вещественных числа. Мы можем определить две функции с одним и тем же именем, но с разными параметрами:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer9">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int Add(int a, int b)
+{
+    return a + b;
+}
+
+double Add(double a, double b)
+{
+    return a + b;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Теперь мы можем использовать функцию `Add` для складывания целых и вещественных чисел:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int result1 = Add(2, 3);         // результат равен 5 (вызывается первая версия функции Add)
+double result2 = Add(2.5, 3.7);  // результат равен 6.2 (вызывается вторая версия функции Add)</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Когда мы вызываем функцию `Add` с двумя целыми числами, вызывается первая версия функции, которая возвращает результат в виде целого числа. Когда мы вызываем функцию `Add` с двумя вещественными числами, вызывается вторая версия функции, которая возвращает результат в виде вещественного числа.      </p>
+      <p class="textIndent">Перегрузка функций также может использоваться для упрощения кода. Рассмотрим следующий пример:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer9_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int Multiply(int a, int b)
+{
+    return a * b;
+}
+
+int Multiply(int a, int b, int c)
+{
+    return a * b * c;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Здесь мы определили две функции `Multiply`, которые умножают два или три целых числа. Теперь мы можем использовать эти функции в зависимости от количества чисел, которые мы хотим умножить:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer2_3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int result1 = Multiply(2, 3);           // результат равен 6 (вызывается первая версия функции Multiply)
+int result2 = Multiply(2, 3, 4);        // результат равен 24 (вызывается вторая версия функции Multiply)</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Кроме того, в C# есть возможность определить функции с параметрами по умолчанию. Это означает, что если мы не передаем значения для этих параметров при вызове функции, то они будут автоматически инициализированы значениями по умолчанию.      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer2_3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int Add(int a, int b, int c = 0)
+{
+    return a + b + c;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Здесь мы определили функцию  `Add`, которая принимает два целочисленных аргумента и возвращает их сумму. Это пример простой функции, которая выполняет одну задачу. Но что, если нам нужно написать функцию, которая может выполнять разные задачи в зависимости от переданных аргументов? В этом случае мы можем использовать перегрузку функций.      </p>
+      <p class="textIndent">Перегрузка функций - это возможность определять несколько функций с одним и тем же именем, но с разными списками аргументов. При вызове такой функции, компилятор будет выбирать наиболее подходящую функцию на основе типов и количества переданных аргументов.      </p>
+      <p class="textIndent">Рассмотрим пример перегрузки функций:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer11">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int Add(int a, int b) {
+    return a + b;
+}
+
+double Add(double a, double b) {
+    return a + b;
+}
+
+int Add(int a, int b, int c) {
+    return a + b + c;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Здесь мы определили три функции с именем `Add`, каждая из которых принимает разное количество или тип аргументов. Если мы вызываем функцию `Add` с двумя целочисленными аргументами, будет вызвана первая функция `Add(int a, int b)`. Если мы вызываем функцию `Add` с двумя аргументами типа `double`, будет вызвана вторая функция `Add(double a, double b)`. А если мы вызываем функцию `Add` с тремя целочисленными аргументами, будет вызвана третья функция `Add(int a, int b, int c)`.      </p>
+      <p class="textIndent">Кроме того, в C# есть возможность указать параметры функции со значением по умолчанию. Это позволяет вызывать функцию без указания всех параметров, если у них есть значения по умолчанию. Рассмотрим пример:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int Add(int a, int b = 0, int c = 0) {
+    return a + b + c;
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Здесь мы определили функцию `Add`, которая принимает три аргумента, но у второго и третьего параметра есть значения по умолчанию, равные нулю. Если мы вызываем функцию `Add` с одним аргументом, будет вычислена сумма этого аргумента и двух нулей. Если мы вызываем функцию `Add` с двумя аргументами, будет вычислена сумма этих аргументов и одного нуля. А если мы вызываем функцию Add с тремя аргументами, будет вычислена сумма всех трех аргументов.      </p>
+      <h3>Рекурсия</h3>
+      <p class="textIndent">Рекурсия - это процесс, в котором функция вызывает сама себя в своем теле. Рекурсивные функции могут использоваться во многих задачах, таких как обход деревьев и списков, вычисление факториала числа и т.д.      </p>
+      <p class="textIndent">Для того, чтобы функция была рекурсивной, она должна иметь базовый случай и случай рекурсии. Базовый случай - это крайний случай, когда функция больше не вызывает саму себя и возвращает результат. Случай рекурсии - это случай, когда функция вызывает сама себя с новыми аргументами, приближаясь к базовому случаю.      </p>
+      <p class="textIndent">Рассмотрим пример рекурсивной функции для вычисления факториала числа:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer11_2">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">public static int Factorial(int n)
+{
+    if (n == 0)
+    {
+        return 1; // базовый случай
+    }
+    else
+    {
+        return n * Factorial(n - 1); // случай рекурсии
+    }
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">В этом примере функция `Factorial` вызывает саму себя с аргументом `n - 1` до тех пор, пока не достигнет базового случая, когда `n` равно  0. При каждом вызове функция уменьшает значение `n` на 1 и умножает результат на `n`, пока `n` не станет равным 0.       </p>
+      <p class="textIndent">Пример использования функции `Factorial`:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer2_4">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int result = Factorial(5); // вычисляем факториал числа 5
+Console.WriteLine(result); // выводим результат (120)</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Еще один пример рекурсивной функции - функция для вычисления чисел Фибоначчи:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer11_3">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">public static int Fibonacci(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n; // базовые случаи
+    }
+    else
+    {
+        return Fibonacci(n - 1) + Fibonacci(n - 2); // случай рекурсии
+    }
+}</code></p>  
+        </div>
+      </div>  
+      <p class="textIndent">Эта функция вызывает саму себя с аргументами `n - 1` и `n - 2` до тех пор, пока не достигнет базового случая, когда `n` равно 0 или 1. При каждом вызове функция возвращает сумму двух предыдущих чисел Фибоначчи.      </p>
+      <p class="textIndent">Пример использования функции `Fibonacci`:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer2_7">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">int result = Fibonacci(6); // вычисляем шестое число Фибоначчи
+Console.WriteLine(result); // выводим результат (8)</code></p>  
+        </div>
+        </div>
+        <p class="textIndent" >Использование рекурсии может привести к переполнению стека, особенно при работе с большими значениями аргументов или при неправильной рекурсивной структуре функции. Но в правильно построенных функциях рекурсия может быть очень полезной и удобной.</p>        
+        <h2>Задание</h2>
+        <h3>Задание по функциям:</h3>
+        <p class="textIndent">Напишите функцию, которая принимает два целых числа и возвращает их сумму. Затем напишите код, который вызывает эту функцию и выводит результат на экран.        </p>
+
+<button class="button" onclick="toggleText('hiddenText1')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText1">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer20">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Program
+{
+    // Функция для вычисления суммы двух чисел
+    public static int Sum(int a, int b)
+    {
+        return a + b;
+    }
+
+    public static void Main(string[] args)
+    {
+        int num1 = 5;
+        int num2 = 3;
+
+        // Вызов функции Sum и вывод результата
+        int result = Sum(num1, num2);
+        Console.WriteLine("Сумма чисел {0} и {1} равна {2}", num1, num2, result);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+<h3>Задание по процедурам:</h3>
+<p class="textIndent">Напишите процедуру, которая принимает строку в качестве аргумента и выводит ее на экран в обратном порядке. Затем напишите код, который вызывает эту процедуру и передает ей строку для вывода.</p>
+<button class="button" onclick="toggleText('hiddenText2')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText2">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer22">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Program
+{
+    // Процедура для вывода строки в обратном порядке
+    public static void ReverseString(string str)
+    {
+        for (int i = str.Length - 1; i >= 0; i--)
+        {
+            Console.Write(str[i]);
+        }
+        Console.WriteLine();
+    }
+
+    public static void Main(string[] args)
+    {
+        string input = "Hello, world!";
+
+        // Вызов процедуры ReverseString для вывода строки в обратном порядке
+        ReverseString(input);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+<h3>Задание на рекурсию:</h3>
+<p class="textIndent">Напишите рекурсивную функцию, которая принимает положительное целое число и вычисляет его факториал (произведение всех чисел от 1 до этого числа). Затем напишите код, который вызывает эту функцию и выводит результат на экран.</p>
+
+<button class="button" onclick="toggleText('hiddenText3')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText3">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer22_2">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Program
+{
+    // Рекурсивная функция для вычисления факториала числа
+    public static int Factorial(int n)
+    {
+        if (n == 0)
+            return 1;
+        else
+            return n * Factorial(n - 1);
+    }
+
+    public static void Main(string[] args)
+    {
+        int number = 5;
+
+        // Вызов рекурсивной функции Factorial для вычисления факториала числа
+        int result = Factorial(number);
+        Console.WriteLine("Факториал числа {0} равен {1}", number, result);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+<h3>Задание на функции с возвратом объектов:</h3>
+<p class="textIndent ">Напишите функцию, которая принимает массив целых чисел и возвращает новый массив, содержащий только четные числа из исходного массива. Затем напишите код, который вызывает эту функцию, передает ей массив и выводит результат на экран.</p>
+<button class="button" onclick="toggleText('hiddenText4')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText4">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer48">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Program
+{
+    // Функция для фильтрации четных чисел из массива
+    public static int[] FilterEvenNumbers(int[] numbers)
+    {
+        int count = 0;
+
+        // Подсчет количества четных чисел
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] % 2 == 0)
+                count++;
+        }
+
+        // Создание нового массива с четными числами
+        int[] evenNumbers = new int[count];
+        int index = 0;
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] % 2 == 0)
+            {
+                evenNumbers[index] = numbers[i];
+                index++;
+            }
+        }
+
+        return evenNumbers;
+    }
+
+    public static void Main(string[] args)
+    {
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        // Вызов функции FilterEvenNumbers для фильтрации четных чисел
+        int[] evenNumbers = FilterEvenNumbers(numbers);
+
+        // Вывод результата на экран
+        Console.WriteLine("Четные числа из исходного массива:");
+        foreach (int num in evenNumbers)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+<h3>Задание на процедуры с изменением аргументов по ссылке:</h3>
+<p class="textIndent">Напишите процедуру, которая принимает два целых числа и меняет их значения местами. Затем напишите код, который вызывает эту процедуру, передает ей два числа и выводит измененные значения на экран.</p>
+
+<button class="button" onclick="toggleText('hiddenText10')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText10">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer27">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Program
+{
+    // Процедура для обмена значениями двух целых чисел
+    public static void SwapNumbers(ref int a, ref int b)
+    {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    public static void Main(string[] args)
+    {
+        int num1 = 5;
+        int num2 = 10;
+
+        Console.WriteLine("Исходные значения:");
+        Console.WriteLine("num1 = {0}, num2 = {1}", num1, num2);
+
+        // Вызов процедуры SwapNumbers для обмена значениями
+        SwapNumbers(ref num1, ref num2);
+
+        Console.WriteLine("Измененные значения:");
+        Console.WriteLine("num1 = {0}, num2 = {1}", num1, num2);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function toggleText(id) {
+    let text = document.getElementById(id);
+    if (text.classList.contains("active")) {
+      text.classList.remove("active");
+      setTimeout(() => {
+        text.style.display = "none";
+      }, 300);
+    } else {
+      text.style.display = "block";
+      setTimeout(() => {
+        text.classList.add("active");
+      }, 10);
+    }
+  }
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+    <div
+      style="
+        height: 100px;
+        margin-top: 100px;
+        background: rgb(40, 42, 53);
+        clear: both;
+      "
+    >
+      <p style="text-align: right">
+        Если есть вопросы или нашли ошибку смело пишите мне
+        <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a>
+      </p>
+    </div>
+  </body>
+  >
+</html>
