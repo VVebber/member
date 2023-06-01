@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <title>Data input and output</title>
+</head>
+<body>
+<div>
+  <div class="flex background_black flex_dirction border_black content_center sticky-element">
+    <header  id="header"></header>
+  </div>
+
+  <div class="flex">
+    <div>
+      <header class="flex background_gray les3 left_m sticky-element2" id="side_piece"></header>
+    </div>
+
+    <div class="lessen block">
+      <h1>Классы и объекты</h1>
+      <h2>Создание классов и объектов.      </h2>
+      <p>Для создания класса на языке C# необходимо выполнить следующие шаги:      </p>
+      <ol>
+        <li>Открыть среду разработки Visual Studio или другую IDE для C#.        </li>
+        <li>Создать новый проект C#.        </li>
+        <li>Открыть файл с расширением ".cs" для создания класса.        </li>
+        <li>Написать ключевое слово "class", за которым следует имя класса. Например:        </li>
+
+
+        <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+          <div class="border-right_grin padding_left padding_right grey">
+            <p id="integer4">1</p>
+          </div>
+          <div class="font_size20xp">
+            <p  class="white_space white padding_right"><code class="language-csharp">class MyClass
+{
+   // тело класса
+}   </code></p>  
+          </div>
+          </div>
+        <li> <p>В теле класса объявляются члены класса. Члены класса могут быть следующих типов:        </p> 
+            <ul>
+              <li>Поля класса (fields) - это переменные, объявленные внутри класса.              </li>
+              <li>Методы класса (methods) - это функции, объявленные внутри класса.              </li>
+              <li>Свойства класса (properties) - это специальные методы, которые позволяют получать и устанавливать значения поля класса.              </li>
+              <li>Конструкторы класса (constructors) - это специальные методы, которые вызываются при создании экземпляра класса и служат для инициализации полей класса.              </li>
+              <li>Деструкторы класса (destructors) - это специальные методы, которые вызываются при уничтожении экземпляра класса и служат для освобождения ресурсов.              </li>
+            </ul>
+        </li>
+      </ol>
+      <h3>Поля и методы классов</h3>
+      <p class="textIndent">Поля и методы являются основными элементами классов в объектно-ориентированном программировании. Поля представляют данные объекта, а методы представляют операции, которые можно выполнить с этими данными. В этой лекции мы рассмотрим, что такое поля и методы классов, как они определяются и как их можно использовать в программировании.      </p>
+      <h4>Поля классов      </h4>
+      <p class="textIndent">Поля классов представляют данные, которые содержит объект класса. Например, если у нас есть класс "Человек", то полями могут быть его имя, возраст, рост и вес. Поля классов могут быть объявлены с модификаторами доступа, такими как public, private или protected, которые определяют уровень доступности к полям из других классов.      </p>
+      <p>В C# объявление поля класса выглядит следующим образом:      </p>
+      <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+        <div class="border-right_grin padding_left padding_right grey">
+          <p id="integer">1</p>
+        </div>
+        <div class="font_size20xp">
+          <p  class="black white_space white padding_right">&lt;code class="language-csharp"&gt;&lt;модификаторы доступа&gt; &lt;тип данных&gt; &lt;имя поля&gt;;          </code></p>  
+        </div>
+        </div>
+        <p>Например, объявление поля класса "Человек" может выглядеть так:        </p>
+        <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+          <div class="border-right_grin padding_left padding_right grey">
+            <p id="integer6">1</p>
+          </div>
+          <div class="font_size20xp">
+            <p  class="white_space white padding_right"><code class="language-csharp">public class Person
+{
+    private string name;
+    private int age;
+    public double height;
+}</code></p>  
+          </div>
+          </div>
+          <p class="textIndent">В этом примере мы объявили три поля класса Person: name, age и height. Модификаторы доступа указывают, что поля name и age доступны только внутри класса Person, а поле height доступно и из других классов.          </p>
+          <h3>Методы классов          </h3>
+          <p>Методы классов представляют операции, которые можно выполнить с данными объекта класса. Например, если у нас есть класс "Человек", то методы могут быть определены для получения и установки имени, возраста, роста и веса объекта.          </p>
+          <p>В C# объявление метода класса выглядит следующим образом:          </p>
+          <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+            <div class="border-right_grin padding_left padding_right grey">
+              <p id="integer4_2">1</p>
+            </div>
+            <div class="font_size20xp">
+              <p  class="white_space white padding_right"><code class="language-csharp"><модификаторы доступа> <возвращаемый тип> <имя метода>(<параметры>)
+{
+    // тело метода
+}</code></p>  
+            </div>
+            </div>
+            <p class="textIndent">Например, мы можем определить методы для получения и установки имени человека в классе Person следующим образом:            </p>
+            <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+              <div class="border-right_grin padding_left padding_right grey">
+                <p id="integer16">1</p>
+              </div>
+              <div class="font_size20xp">
+                <p  class="white_space white padding_right"><code class="language-csharp">public class Person
+{
+    private string name;
+    private int age;
+    public double height;
+    
+    public string GetName()
+    {
+        return name;
+    }
+    
+    public void SetName(string newName)
+    {
+        name = newName;
+    }
+}</code></p>  
+              </div>
+              </div>
+              <p class="textIndent">В этом примере мы определили два метода класса Person: GetName() и SetName(). Метод GetName() возвращает значение поля name, а метод SetName() устанавливает новое значение поля name.              </p>
+              <h3>Конструкторы и деструкторы.</h3>
+              <p class="textIndent">Конструкторы и деструкторы - это специальные методы класса, которые позволяют инициализировать и освобождать ресурсы объекта.              </p>
+              <h3>Конструкторы</h3>
+              <p class="textIndent">Конструкторы класса выполняются при создании объекта и служат для инициализации его состояния. Конструкторы могут принимать параметры и задавать начальные значения полям объекта. Конструкторы могут иметь различные варианты именования, например, может быть конструктор по умолчанию (без параметров) и конструктор с параметрами. Пример объявления конструкторов в C#:              </p>
+              <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+                <div class="border-right_grin padding_left padding_right grey">
+                   <p id="integer4_2">1</p>
+                </div>
+                <div class="font_size20xp">
+ <p  class="white_space white padding_right"><code class="language-csharp">class MyClass {
+   public MyClass() {
+      // конструктор по умолчанию
+   }
+   public MyClass(int value) {
+      // конструктор с параметром value
+   }
+}</code></p>  
+                </div>
+                </div>
+                <h3>Деструкторы</h3>
+                <p class="textIndent">Деструкторы класса выполняются при удалении объекта и служат для освобождения его ресурсов. Деструкторы имеют имя ~ClassName() и не могут иметь параметров. Пример объявления деструктора в C#:                </p>
+                <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+                  <div class="border-right_grin padding_left padding_right grey">
+                     <p id="integer4_2">1</p>
+                  </div>
+                  <div class="font_size20xp">
+   <p  class="white_space white padding_right"><code class="language-csharp">class MyClass {
+   // ...
+   ~MyClass() {
+      // деструктор
+   }
+}</code></p>  
+      </div>
+    </div>
+    <p class="textIndent">Некоторые языки программирования, например C++, позволяют определять деструкторы с параметрами. Однако в C# деструкторы не могут иметь параметров, так как они вызываются автоматически при удалении объекта.    </p>
+    <p class="textIndent">Конструкторы и деструкторы очень важны для правильного управления ресурсами объектов, особенно в случае работы с внешними ресурсами, такими как файлы, сетевые соединения и базы данных.    </p>
+    <h2>Статические и нестатические члены классов.    </h2>
+    <p class="textIndent">В C# и других языках программирования объектно-ориентированного программирования, классы могут иметь как статические, так и нестатические члены.    </p>
+    <p class="textIndent">Статические члены класса являются общими для всех экземпляров класса и доступны без создания экземпляра класса. Они обычно используются для создания общих методов и свойств, которые не зависят от конкретного экземпляра класса, а также для хранения данных, которые должны быть доступны для всех экземпляров класса.    </p>
+    <p class="textIndent">Нестатические члены класса, такие как методы и свойства, могут быть вызваны только на экземпляре класса и используются для доступа к полям объекта, а также для выполнения операций с объектом.    </p>
+    <p class="textIndent">Для создания статических членов класса в C# используется ключевое слово static. Пример статического метода класса:    </p>
+    <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+         <p id="integer7">1</p>
+      </div>
+      <div class="font_size20xp">
+<p  class="white_space white padding_right"><code class="language-csharp">class MyClass {
+  public static int myStaticField;
+  
+  public static void MyStaticMethod() {
+      Console.WriteLine("This is a static method");
+  }
+}</code></p>  
+</div>
+</div>
+    <p class="textIndent">В приведенном выше примере myStaticField является статическим полем класса, а MyStaticMethod - статическим методом класса.    </p>
+    <p class="textIndent">Чтобы создать нестатические члены класса, необходимо определить их внутри класса, но за пределами статических методов и свойств. Пример нестатического метода класса:    </p>
+    <div class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+         <p id="integer7_2">1</p>
+      </div>
+      <div class="font_size20xp">
+<p  class="white_space white padding_right"><code class="language-csharp">class MyClass {
+  public int myField;
+  
+  public void MyMethod() {
+      Console.WriteLine("This is a non-static method");
+  }
+}</code></p>  
+</div>
+</div>
+<p class="textIndent">В приведенном выше примере myField является нестатическим полем класса, а MyMethod - нестатическим методом класса.</p>
+<p class="textIndent">Статические и нестатические члены класса могут использоваться вместе, чтобы обеспечить полную функциональность класса. Например, статический метод может использоваться для создания нового экземпляра класса, который затем может использоваться для вызова нестатических методов и свойств.</p>
+<h2>Задание</h2>
+<ol>
+<li><h3>Классы и объекты:</h3></li>
+<ul>
+  <li>Создай класс "Сотрудник" со следующими полями: имя, возраст, должность.  </li>
+  <li>Создай объекты этого класса и заполните их данными.  </li>
+  <li>Напиши метод в классе "Сотрудник", который выводит информацию о сотруднике. </li>
+</ul>
+<button class="button" onclick="toggleText('hiddenText1')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText1">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer37">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Сотрудник
+{
+    public string Имя;       // Поле "Имя"
+    public int Возраст;      // Поле "Возраст"
+    public string Должность; // Поле "Должность"
+
+    public void ВывестиИнформацию()
+    {
+        Console.WriteLine($"Имя: {Имя}");
+        Console.WriteLine($"Возраст: {Возраст}");
+        Console.WriteLine($"Должность: {Должность}");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        // Создание объекта класса "Сотрудник" и заполнение данных
+        Сотрудник сотрудник1 = new Сотрудник();
+        сотрудник1.Имя = "Иван";
+        сотрудник1.Возраст = 30;
+        сотрудник1.Должность = "Менеджер";
+
+        Сотрудник сотрудник2 = new Сотрудник();
+        сотрудник2.Имя = "Мария";
+        сотрудник2.Возраст = 25;
+        сотрудник2.Должность = "Ассистент";
+
+        // Вызов метода для вывода информации о сотрудниках
+        сотрудник1.ВывестиИнформацию();
+        Console.WriteLine();
+        сотрудник2.ВывестиИнформацию();
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+
+<li><h3>Поля и методы:</h3></li>
+<ul>
+  <li>Создай класс "Прямоугольник" с приватными полями "длина" и "ширина".  </li>
+  <li>Напиши методы для вычисления площади и периметра прямоугольника.  </li>
+  <li>Создай объект класса "Прямоугольник" и вызови его методы.  </li>
+</ul>
+<button class="button" onclick="toggleText('hiddenText3')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText3">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer43">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+class Прямоугольник
+{
+    private double длина; // Приватное поле для хранения длины прямоугольника
+    private double ширина; // Приватное поле для хранения ширины прямоугольника
+
+    // Конструктор класса, принимающий длину и ширину прямоугольника
+    public Прямоугольник(double длина, double ширина)
+    {
+        this.длина = длина;
+        this.ширина = ширина;
+    }
+
+    // Метод для вычисления площади прямоугольника
+    public double ВычислитьПлощадь()
+    {
+        return длина * ширина;
+    }
+
+    // Метод для вычисления периметра прямоугольника
+    public double ВычислитьПериметр()
+    {
+        return 2 * (длина + ширина);
+    }
+}
+
+class Программа
+{
+    static void Main()
+    {
+        // Создание объекта класса Прямоугольник с заданными значениями длины и ширины
+        Прямоугольник прямоугольник = new Прямоугольник(5, 3);
+
+        // Вызов метода ВычислитьПлощадь() и вывод результата на экран
+        double площадь = прямоугольник.ВычислитьПлощадь();
+        Console.WriteLine("Площадь прямоугольника: " + площадь);
+
+        // Вызов метода ВычислитьПериметр() и вывод результата на экран
+        double периметр = прямоугольник.ВычислитьПериметр();
+        Console.WriteLine("Периметр прямоугольника: " + периметр);
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+
+
+<li><h3>Конструкторы и деструкторы:</h3></li>
+<ul>
+  <li>Добавь конструктор класса "Сотрудник", который принимает имя, возраст и должность и инициализирует соответствующие поля.</li>
+  <li>Добавь деструктор класса "Сотрудник", который выводит сообщение о том, что объект удален.  </li>
+</ul>
+<button class="button" onclick="toggleText('hiddenText10')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText10">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer40">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Сотрудник
+{
+    // Поля класса Сотрудник
+    private string имя;
+    private int возраст;
+    private string должность;
+
+    // Конструктор класса Сотрудник
+    public Сотрудник(string name, int age, string position)
+    {
+        имя = name;
+        возраст = age;
+        должность = position;
+        Console.WriteLine("Создан новый сотрудник: {0}, {1} лет, должность: {2}", имя, возраст, должность);
+    }
+
+    // Деструктор класса Сотрудник
+    ~Сотрудник()
+    {
+        Console.WriteLine("Объект сотрудника {0} удален", имя);
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Создание объекта класса Сотрудник с использованием конструктора
+        Сотрудник сотрудник = new Сотрудник("Иван", 30, "Менеджер");
+
+        // Некоторые действия с объектом сотрудник...
+
+        // При завершении программы будет вызван деструктор и выведено сообщение об удалении объекта
+
+        // Задержка, чтобы увидеть вывод в консоли
+        Console.ReadLine();
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+<li><h3>Создание класса с нестатическими и статическими полями:</h3></li>
+<ul>
+  <li>Создай класс "Счетчик" с нестатическим полем "счетчикЭкземпляров" и статическим полем "общийСчетчик".  </li>
+  <li>В конструкторе класса увеличь значение "счетчикЭкземпляров" на 1 и "общийСчетчик" на 1.  </li>
+  <li>Создай несколько объектов класса "Счетчик" и выведи значения полей.  </li>
+</ul>
+<button class="button" onclick="toggleText('hiddenText12')">Ответ</button>
+        
+<div class="fade-in" id="hiddenText12">
+  <div  class=" inline-flex border_gray2px les2 font_size20xp background_olive ">
+      <div class="border-right_grin padding_left padding_right grey">
+        <p id="integer33">1</p>
+      </div>
+      <div class="font_size20xp">
+          <p  class="white_space white padding_right"><code class="language-csharp">using System;
+
+public class Счетчик
+{
+    private int счетчикЭкземпляров; // Нестатическое поле
+    private static int общийСчетчик; // Статическое поле
+
+    public Счетчик()
+    {
+        счетчикЭкземпляров++; // Увеличиваем значение нестатического поля при создании нового объекта
+        общийСчетчик++; // Увеличиваем значение статического поля при создании нового объекта
+    }
+
+    public void ВывестиСчетчики()
+    {
+        Console.WriteLine("Счетчик экземпляров: " + счетчикЭкземпляров);
+        Console.WriteLine("Общий счетчик: " + общийСчетчик);
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Счетчик счетчик1 = new Счетчик();
+        Счетчик счетчик2 = new Счетчик();
+        Счетчик счетчик3 = new Счетчик();
+
+        счетчик1.ВывестиСчетчики();
+        счетчик2.ВывестиСчетчики();
+        счетчик3.ВывестиСчетчики();
+    }
+}</code></p>
+    </div>
+  </div>
+</div>
+</ol>
+
+
+
+
+    </div>
+  </div>
+</div>
+<script src="../Javascript/One.js"></script>
+<script src="../Javascript/console.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+<div style="height: 100px;     background: rgb(40, 42, 53); clear: both;">
+  <p style="text-align: right">Если есть вопросы или нашли ошибку смело пишите мне <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a></p></div>
+</div>
+</body>
+</html>

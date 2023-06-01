@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <title>first program</title>
+</head>
+</head>
+<body>
+<div>
+  <div class="flex background_black flex_dirction border_black content_center sticky-element">
+    <header  id="header"></header>
+  </div>
+
+  <div class="flex">
+    <div>
+      <header class="flex background_gray les3 left_m sticky-element2" id="side_piece"></header>
+    </div>
+
+    <div class="lessen block"`>
+    <h1>Первая программа</h1>
+        <p class="textIndent">Первая программа на C# - это простая консольная программа, которая выводит на экран приветствие. Для начала нужно установить на свой компьютер интегрированную среду разработки (IDE) для C#, например, Microsoft Visual Studio.</p>
+        <p class="textIndent">После установки IDE нужно открыть ее и создать новый проект. Для этого нужно выбрать в меню File (Файл) пункт New (Новый) и затем выбрать пункт Project (Проект). В открывшемся окне нужно выбрать шаблон проекта Console App (.NET Core) и нажать на кнопку Create (Создать).</p>
+        <p class="textIndent">После создания проекта появится окно редактора кода, в котором нужно написать код программы. Ниже приведен код для простейшей консольной программы на C#:</p>
+
+        <div class="inline-flex border_gray2px les2 font_size20xp background_olive ">
+            <div class="border-right_grin padding_left padding_right grey">
+                <p id="integer10">1</p>
+            </div>
+            <div class="font_size20xp">
+                <p class="white_space white padding_right"><code class="language-csharp">using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Привет, мир!");
+        System.Diagnostics.Debugger.Break();
+    }
+}</code></p>
+            </div>
+        </div>
+        <ol>
+            <li><b>`using System;`</b> - это директива using, которая используется для подключения пространства имен System, в котором находятся основные классы и методы C#.</li>
+            <li><b>`class Program`</b> - это определение класса Program.</li>
+            <li><b>`static void Main(string[] args)`</b> - это метод Main, который является входной точкой программы. Этот метод должен быть статическим (static), возвращать void и принимать массив строк (string[]) в качестве аргументов.</li>
+            <li><b>`Console.WriteLine("Привет, мир!");`</b> - это метод WriteLine, который выводит строку "Привет, мир!" на консоль.</li>
+            <li><b>`System.Diagnostics.Debugger.Break();`</b> - это метод, который вызывает диалоговое окно отладчика для приостановки выполнения программы в точке, где этот метод был вызван.</li>
+        </ol>
+        <p class="textIndent">После написания кода программы нужно нажать на кнопку Run (Запустить), чтобы скомпилировать и запустить программу. После запуска на консольном окне будет выведена строка "Привет, мир!".</p>
+    </div>
+  </div>
+</div>
+<script src="../Javascript/One.js"></script>
+<script src="../Javascript/console.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-csharp.min.js"></script>
+<div style="height: 100px;     background: rgb(40, 42, 53); clear: both;">
+    <p style="text-align: right">Если есть вопросы или нашли ошибку смело пишите мне <a href="mailto:malishevdanil@yandex.ru">Данилу М.В.</a></p></div>
+</div>
+</body>
+</html>
